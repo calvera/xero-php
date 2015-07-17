@@ -33,7 +33,7 @@ Using composer:
 
 ```json
   "require": {
-  	"calcinai/xero-php": "1.2.*"
+    "calcinai/xero-php": "~1.2"
   }
 ```
 
@@ -64,9 +64,9 @@ Or create & populate it
 ```php
 $contact = new \XeroPHP\Models\Accounting\Contact($xero);
 $contact->setName('Test Contact')
-	->setFirstName('Test')
-	->setLastName('Contact')
-	->setEmailAddress('test@example.com');
+    ->setFirstName('Test')
+    ->setLastName('Contact')
+    ->setEmailAddress('test@example.com');
 ```
 
 Save it
@@ -88,7 +88,7 @@ Attachments
 ```php
 $attachments = $invoice->getAttachments();
 foreach($attachment as $attachment){
-	//Do something with them
+    //Do something with them
     file_put_contents($attachment->getFileName(), $attachment->getContent());
 }
 
@@ -100,3 +100,12 @@ $invoice->addAttachment($attachment);
 PDF - Models that support PDF export will inherit a ```->getPDF()``` method, which returns the raw content of the PDF.  Currently this is limited to Invoices and CreditNotes.
 
 Refer to the [examples](examples) for more complex usage and nested/related objects.
+
+Query parameters
+``` php
+$query = $xero->load('Accounting\\Contact');
+$this->query->where('Name == :name OR FirstName == :first_name');
+$this->query->setParameter('name', 'ACME');
+$this->query->setParameter('first_name', 'John');
+$contacts = $query->execute();
+```
