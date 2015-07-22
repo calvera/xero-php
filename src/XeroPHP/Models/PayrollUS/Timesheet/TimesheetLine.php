@@ -100,7 +100,7 @@ class TimesheetLine extends Remote\Object {
      * @return string
      */
     public function getEarningsTypeID() {
-        return $this->_data['EarningsTypeID'];
+        return isset($this->_data['EarningsTypeID']) ? $this->_data['EarningsTypeID'] : null;
     }
 
     /**
@@ -117,7 +117,7 @@ class TimesheetLine extends Remote\Object {
      * @return string
      */
     public function getTrackingItemID() {
-        return $this->_data['TrackingItemID'];
+        return isset($this->_data['TrackingItemID']) ? $this->_data['TrackingItemID'] : null;
     }
 
     /**
@@ -134,7 +134,7 @@ class TimesheetLine extends Remote\Object {
      * @return string[]
      */
     public function getNumberOfUnits() {
-        return $this->_data['NumberOfUnits'];
+        return isset($this->_data['NumberOfUnits']) ? $this->_data['NumberOfUnits'] : null;
     }
 
     /**

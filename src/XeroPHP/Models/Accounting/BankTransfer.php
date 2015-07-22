@@ -149,7 +149,7 @@ class BankTransfer extends Remote\Object {
      * @return FromBankAccount
      */
     public function getFromBankAccount() {
-        return $this->_data['FromBankAccount'];
+        return isset($this->_data['FromBankAccount']) ? $this->_data['FromBankAccount'] : null;
     }
 
     /**
@@ -166,7 +166,7 @@ class BankTransfer extends Remote\Object {
      * @return ToBankAccount
      */
     public function getToBankAccount() {
-        return $this->_data['ToBankAccount'];
+        return isset($this->_data['ToBankAccount']) ? $this->_data['ToBankAccount'] : null;
     }
 
     /**
@@ -183,7 +183,7 @@ class BankTransfer extends Remote\Object {
      * @return string
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**
@@ -200,7 +200,7 @@ class BankTransfer extends Remote\Object {
      * @return \DateTime
      */
     public function getDate() {
-        return $this->_data['Date'];
+        return isset($this->_data['Date']) ? $this->_data['Date'] : null;
     }
 
     /**
@@ -217,7 +217,7 @@ class BankTransfer extends Remote\Object {
      * @return string
      */
     public function getBankTransferID() {
-        return $this->_data['BankTransferID'];
+        return isset($this->_data['BankTransferID']) ? $this->_data['BankTransferID'] : null;
     }
 
     /**
@@ -234,7 +234,7 @@ class BankTransfer extends Remote\Object {
      * @return float
      */
     public function getCurrencyRate() {
-        return $this->_data['CurrencyRate'];
+        return isset($this->_data['CurrencyRate']) ? $this->_data['CurrencyRate'] : null;
     }
 
 
@@ -242,7 +242,7 @@ class BankTransfer extends Remote\Object {
      * @return string
      */
     public function getFromBankTransactionID() {
-        return $this->_data['FromBankTransactionID'];
+        return isset($this->_data['FromBankTransactionID']) ? $this->_data['FromBankTransactionID'] : null;
     }
 
 
@@ -250,7 +250,7 @@ class BankTransfer extends Remote\Object {
      * @return string
      */
     public function getToBankTransactionID() {
-        return $this->_data['ToBankTransactionID'];
+        return isset($this->_data['ToBankTransactionID']) ? $this->_data['ToBankTransactionID'] : null;
     }
 
 
@@ -258,7 +258,7 @@ class BankTransfer extends Remote\Object {
      * @return bool
      */
     public function getHasAttachments() {
-        return $this->_data['HasAttachments'];
+        return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
 

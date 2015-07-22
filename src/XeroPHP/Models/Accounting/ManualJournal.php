@@ -154,7 +154,7 @@ class ManualJournal extends Remote\Object {
      * @return string
      */
     public function getManualJournalID() {
-        return $this->_data['ManualJournalID'];
+        return isset($this->_data['ManualJournalID']) ? $this->_data['ManualJournalID'] : null;
     }
 
     /**
@@ -171,7 +171,7 @@ class ManualJournal extends Remote\Object {
      * @return string
      */
     public function getNarration() {
-        return $this->_data['Narration'];
+        return isset($this->_data['Narration']) ? $this->_data['Narration'] : null;
     }
 
     /**
@@ -188,7 +188,7 @@ class ManualJournal extends Remote\Object {
      * @return JournalLine[]
      */
     public function getJournalLines() {
-        return $this->_data['JournalLines'];
+        return isset($this->_data['JournalLines']) ? $this->_data['JournalLines'] : null;
     }
 
     /**
@@ -205,7 +205,7 @@ class ManualJournal extends Remote\Object {
      * @return \DateTime
      */
     public function getDate() {
-        return $this->_data['Date'];
+        return isset($this->_data['Date']) ? $this->_data['Date'] : null;
     }
 
     /**
@@ -222,7 +222,7 @@ class ManualJournal extends Remote\Object {
      * @return string
      */
     public function getLineAmountTypes() {
-        return $this->_data['LineAmountTypes'];
+        return isset($this->_data['LineAmountTypes']) ? $this->_data['LineAmountTypes'] : null;
     }
 
     /**
@@ -239,7 +239,7 @@ class ManualJournal extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -256,7 +256,7 @@ class ManualJournal extends Remote\Object {
      * @return string
      */
     public function getUrl() {
-        return $this->_data['Url'];
+        return isset($this->_data['Url']) ? $this->_data['Url'] : null;
     }
 
     /**
@@ -273,7 +273,7 @@ class ManualJournal extends Remote\Object {
      * @return bool
      */
     public function getShowOnCashBasisReports() {
-        return $this->_data['ShowOnCashBasisReports'];
+        return isset($this->_data['ShowOnCashBasisReports']) ? $this->_data['ShowOnCashBasisReports'] : null;
     }
 
     /**
@@ -290,7 +290,7 @@ class ManualJournal extends Remote\Object {
      * @return bool
      */
     public function getHasAttachments() {
-        return $this->_data['HasAttachments'];
+        return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
 

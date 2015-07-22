@@ -139,7 +139,7 @@ class File extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -156,7 +156,7 @@ class File extends Remote\Object {
      * @return Folder
      */
     public function getFolderId() {
-        return $this->_data['FolderId'];
+        return isset($this->_data['FolderId']) ? $this->_data['FolderId'] : null;
     }
 
     /**
@@ -173,7 +173,7 @@ class File extends Remote\Object {
      * @return string
      */
     public function getMimeType() {
-        return $this->_data['MimeType'];
+        return isset($this->_data['MimeType']) ? $this->_data['MimeType'] : null;
     }
 
     /**
@@ -190,7 +190,7 @@ class File extends Remote\Object {
      * @return string
      */
     public function getSize() {
-        return $this->_data['Size'];
+        return isset($this->_data['Size']) ? $this->_data['Size'] : null;
     }
 
     /**
@@ -207,7 +207,7 @@ class File extends Remote\Object {
      * @return \DateTime
      */
     public function getCreatedDateUTC() {
-        return $this->_data['CreatedDateUTC'];
+        return isset($this->_data['CreatedDateUTC']) ? $this->_data['CreatedDateUTC'] : null;
     }
 
     /**
@@ -224,7 +224,7 @@ class File extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
     /**
@@ -241,7 +241,7 @@ class File extends Remote\Object {
      * @return string
      */
     public function getUser() {
-        return $this->_data['User'];
+        return isset($this->_data['User']) ? $this->_data['User'] : null;
     }
 
     /**
@@ -258,7 +258,7 @@ class File extends Remote\Object {
      * @return string
      */
     public function getId() {
-        return $this->_data['Id'];
+        return isset($this->_data['Id']) ? $this->_data['Id'] : null;
     }
 
     /**

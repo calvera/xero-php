@@ -104,7 +104,7 @@ class Association extends Remote\Object {
      * @return string
      */
     public function getObjectId() {
-        return $this->_data['ObjectId'];
+        return isset($this->_data['ObjectId']) ? $this->_data['ObjectId'] : null;
     }
 
     /**
@@ -121,7 +121,7 @@ class Association extends Remote\Object {
      * @return string
      */
     public function getObjectGroup() {
-        return $this->_data['ObjectGroup'];
+        return isset($this->_data['ObjectGroup']) ? $this->_data['ObjectGroup'] : null;
     }
 
     /**
@@ -138,7 +138,7 @@ class Association extends Remote\Object {
      * @return string
      */
     public function getObjectType() {
-        return $this->_data['ObjectType'];
+        return isset($this->_data['ObjectType']) ? $this->_data['ObjectType'] : null;
     }
 
     /**

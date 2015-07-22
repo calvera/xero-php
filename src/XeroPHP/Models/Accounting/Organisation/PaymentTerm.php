@@ -92,7 +92,7 @@ class PaymentTerm extends Remote\Object {
      * @return Bill[]
      */
     public function getBills() {
-        return $this->_data['Bills'];
+        return isset($this->_data['Bills']) ? $this->_data['Bills'] : null;
     }
 
     /**
@@ -109,7 +109,7 @@ class PaymentTerm extends Remote\Object {
      * @return Sale[]
      */
     public function getSales() {
-        return $this->_data['Sales'];
+        return isset($this->_data['Sales']) ? $this->_data['Sales'] : null;
     }
 
     /**

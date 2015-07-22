@@ -129,7 +129,7 @@ class LineItem extends Remote\Object {
             'UnitAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'AccountCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'ItemCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'LineAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'Tracking' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
         );
@@ -140,7 +140,7 @@ class LineItem extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -157,7 +157,7 @@ class LineItem extends Remote\Object {
      * @return string
      */
     public function getQuantity() {
-        return $this->_data['Quantity'];
+        return isset($this->_data['Quantity']) ? $this->_data['Quantity'] : null;
     }
 
     /**
@@ -174,7 +174,7 @@ class LineItem extends Remote\Object {
      * @return float
      */
     public function getUnitAmount() {
-        return $this->_data['UnitAmount'];
+        return isset($this->_data['UnitAmount']) ? $this->_data['UnitAmount'] : null;
     }
 
     /**
@@ -191,7 +191,7 @@ class LineItem extends Remote\Object {
      * @return string
      */
     public function getAccountCode() {
-        return $this->_data['AccountCode'];
+        return isset($this->_data['AccountCode']) ? $this->_data['AccountCode'] : null;
     }
 
     /**
@@ -208,7 +208,7 @@ class LineItem extends Remote\Object {
      * @return string
      */
     public function getItemCode() {
-        return $this->_data['ItemCode'];
+        return isset($this->_data['ItemCode']) ? $this->_data['ItemCode'] : null;
     }
 
     /**
@@ -225,7 +225,7 @@ class LineItem extends Remote\Object {
      * @return string
      */
     public function getTaxType() {
-        return $this->_data['TaxType'];
+        return isset($this->_data['TaxType']) ? $this->_data['TaxType'] : null;
     }
 
     /**
@@ -242,7 +242,7 @@ class LineItem extends Remote\Object {
      * @return float
      */
     public function getLineAmount() {
-        return $this->_data['LineAmount'];
+        return isset($this->_data['LineAmount']) ? $this->_data['LineAmount'] : null;
     }
 
     /**
@@ -259,7 +259,7 @@ class LineItem extends Remote\Object {
      * @return string
      */
     public function getTracking() {
-        return $this->_data['Tracking'];
+        return isset($this->_data['Tracking']) ? $this->_data['Tracking'] : null;
     }
 
     /**

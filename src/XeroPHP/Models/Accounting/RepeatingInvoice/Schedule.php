@@ -128,7 +128,7 @@ class Schedule extends Remote\Object {
      * @return int
      */
     public function getPeriod() {
-        return $this->_data['Period'];
+        return isset($this->_data['Period']) ? $this->_data['Period'] : null;
     }
 
     /**
@@ -145,7 +145,7 @@ class Schedule extends Remote\Object {
      * @return string
      */
     public function getUnit() {
-        return $this->_data['Unit'];
+        return isset($this->_data['Unit']) ? $this->_data['Unit'] : null;
     }
 
     /**
@@ -162,7 +162,7 @@ class Schedule extends Remote\Object {
      * @return \DateTime
      */
     public function getDueDate() {
-        return $this->_data['DueDate'];
+        return isset($this->_data['DueDate']) ? $this->_data['DueDate'] : null;
     }
 
     /**
@@ -179,7 +179,7 @@ class Schedule extends Remote\Object {
      * @return PaymentTerm
      */
     public function getDueDateType() {
-        return $this->_data['DueDateType'];
+        return isset($this->_data['DueDateType']) ? $this->_data['DueDateType'] : null;
     }
 
     /**
@@ -196,7 +196,7 @@ class Schedule extends Remote\Object {
      * @return \DateTime
      */
     public function getStartDate() {
-        return $this->_data['StartDate'];
+        return isset($this->_data['StartDate']) ? $this->_data['StartDate'] : null;
     }
 
     /**
@@ -213,7 +213,7 @@ class Schedule extends Remote\Object {
      * @return \DateTime
      */
     public function getNextScheduledDate() {
-        return $this->_data['NextScheduledDate'];
+        return isset($this->_data['NextScheduledDate']) ? $this->_data['NextScheduledDate'] : null;
     }
 
     /**
@@ -230,7 +230,7 @@ class Schedule extends Remote\Object {
      * @return \DateTime
      */
     public function getEndDate() {
-        return $this->_data['EndDate'];
+        return isset($this->_data['EndDate']) ? $this->_data['EndDate'] : null;
     }
 
     /**

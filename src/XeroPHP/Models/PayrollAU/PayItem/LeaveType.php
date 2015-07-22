@@ -129,7 +129,7 @@ class LeaveType extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -146,7 +146,7 @@ class LeaveType extends Remote\Object {
      * @return float[]
      */
     public function getTypeOfUnits() {
-        return $this->_data['TypeOfUnits'];
+        return isset($this->_data['TypeOfUnits']) ? $this->_data['TypeOfUnits'] : null;
     }
 
     /**
@@ -163,7 +163,7 @@ class LeaveType extends Remote\Object {
      * @return string
      */
     public function getIsPaidLeave() {
-        return $this->_data['IsPaidLeave'];
+        return isset($this->_data['IsPaidLeave']) ? $this->_data['IsPaidLeave'] : null;
     }
 
     /**
@@ -180,7 +180,7 @@ class LeaveType extends Remote\Object {
      * @return string
      */
     public function getShowOnPayslip() {
-        return $this->_data['ShowOnPayslip'];
+        return isset($this->_data['ShowOnPayslip']) ? $this->_data['ShowOnPayslip'] : null;
     }
 
     /**
@@ -197,7 +197,7 @@ class LeaveType extends Remote\Object {
      * @return string
      */
     public function getLeaveTypeID() {
-        return $this->_data['LeaveTypeID'];
+        return isset($this->_data['LeaveTypeID']) ? $this->_data['LeaveTypeID'] : null;
     }
 
     /**
@@ -214,7 +214,7 @@ class LeaveType extends Remote\Object {
      * @return string
      */
     public function getNormalEntitlement() {
-        return $this->_data['NormalEntitlement'];
+        return isset($this->_data['NormalEntitlement']) ? $this->_data['NormalEntitlement'] : null;
     }
 
     /**
@@ -231,7 +231,7 @@ class LeaveType extends Remote\Object {
      * @return float
      */
     public function getLeaveLoadingRate() {
-        return $this->_data['LeaveLoadingRate'];
+        return isset($this->_data['LeaveLoadingRate']) ? $this->_data['LeaveLoadingRate'] : null;
     }
 
     /**

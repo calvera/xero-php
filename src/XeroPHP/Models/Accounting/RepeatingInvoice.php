@@ -184,7 +184,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return string
      */
     public function getType() {
-        return $this->_data['Type'];
+        return isset($this->_data['Type']) ? $this->_data['Type'] : null;
     }
 
     /**
@@ -201,7 +201,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return Contact
      */
     public function getContact() {
-        return $this->_data['Contact'];
+        return isset($this->_data['Contact']) ? $this->_data['Contact'] : null;
     }
 
     /**
@@ -218,7 +218,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return Schedule
      */
     public function getSchedule() {
-        return $this->_data['Schedule'];
+        return isset($this->_data['Schedule']) ? $this->_data['Schedule'] : null;
     }
 
     /**
@@ -235,7 +235,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return LineItem[]
      */
     public function getLineItems() {
-        return $this->_data['LineItems'];
+        return isset($this->_data['LineItems']) ? $this->_data['LineItems'] : null;
     }
 
     /**
@@ -252,7 +252,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return string
      */
     public function getLineAmountTypes() {
-        return $this->_data['LineAmountTypes'];
+        return isset($this->_data['LineAmountTypes']) ? $this->_data['LineAmountTypes'] : null;
     }
 
     /**
@@ -269,7 +269,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return string
      */
     public function getReference() {
-        return $this->_data['Reference'];
+        return isset($this->_data['Reference']) ? $this->_data['Reference'] : null;
     }
 
     /**
@@ -286,7 +286,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return string
      */
     public function getBrandingThemeID() {
-        return $this->_data['BrandingThemeID'];
+        return isset($this->_data['BrandingThemeID']) ? $this->_data['BrandingThemeID'] : null;
     }
 
     /**
@@ -303,7 +303,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return string
      */
     public function getCurrencyCode() {
-        return $this->_data['CurrencyCode'];
+        return isset($this->_data['CurrencyCode']) ? $this->_data['CurrencyCode'] : null;
     }
 
     /**
@@ -320,7 +320,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -337,7 +337,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return float
      */
     public function getSubTotal() {
-        return $this->_data['SubTotal'];
+        return isset($this->_data['SubTotal']) ? $this->_data['SubTotal'] : null;
     }
 
     /**
@@ -354,7 +354,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return float
      */
     public function getTotalTax() {
-        return $this->_data['TotalTax'];
+        return isset($this->_data['TotalTax']) ? $this->_data['TotalTax'] : null;
     }
 
     /**
@@ -371,7 +371,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return float
      */
     public function getTotal() {
-        return $this->_data['Total'];
+        return isset($this->_data['Total']) ? $this->_data['Total'] : null;
     }
 
     /**
@@ -388,7 +388,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return string
      */
     public function getRepeatingInvoiceID() {
-        return $this->_data['RepeatingInvoiceID'];
+        return isset($this->_data['RepeatingInvoiceID']) ? $this->_data['RepeatingInvoiceID'] : null;
     }
 
     /**
@@ -405,7 +405,7 @@ class RepeatingInvoice extends Remote\Object {
      * @return bool
      */
     public function getHasAttachments() {
-        return $this->_data['HasAttachments'];
+        return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
     /**

@@ -115,7 +115,7 @@ class PaySchedule extends Remote\Object {
      * @return string
      */
     public function getPayScheduleName() {
-        return $this->_data['PayScheduleName'];
+        return isset($this->_data['PayScheduleName']) ? $this->_data['PayScheduleName'] : null;
     }
 
     /**
@@ -132,7 +132,7 @@ class PaySchedule extends Remote\Object {
      * @return \DateTime
      */
     public function getPaymentDate() {
-        return $this->_data['PaymentDate'];
+        return isset($this->_data['PaymentDate']) ? $this->_data['PaymentDate'] : null;
     }
 
     /**
@@ -149,7 +149,7 @@ class PaySchedule extends Remote\Object {
      * @return \DateTime
      */
     public function getStartDate() {
-        return $this->_data['StartDate'];
+        return isset($this->_data['StartDate']) ? $this->_data['StartDate'] : null;
     }
 
     /**
@@ -166,7 +166,7 @@ class PaySchedule extends Remote\Object {
      * @return string
      */
     public function getScheduleType() {
-        return $this->_data['ScheduleType'];
+        return isset($this->_data['ScheduleType']) ? $this->_data['ScheduleType'] : null;
     }
 
     /**
@@ -183,7 +183,7 @@ class PaySchedule extends Remote\Object {
      * @return string
      */
     public function getPayScheduleId() {
-        return $this->_data['PayScheduleId'];
+        return isset($this->_data['PayScheduleId']) ? $this->_data['PayScheduleId'] : null;
     }
 
     /**

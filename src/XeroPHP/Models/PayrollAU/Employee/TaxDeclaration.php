@@ -181,7 +181,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -198,7 +198,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string
      */
     public function getEmploymentBasis() {
-        return $this->_data['EmploymentBasis'];
+        return isset($this->_data['EmploymentBasis']) ? $this->_data['EmploymentBasis'] : null;
     }
 
     /**
@@ -215,7 +215,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string
      */
     public function getTFNExemptionType() {
-        return $this->_data['TFNExemptionType'];
+        return isset($this->_data['TFNExemptionType']) ? $this->_data['TFNExemptionType'] : null;
     }
 
     /**
@@ -232,7 +232,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string
      */
     public function getTaxFileNumber() {
-        return $this->_data['TaxFileNumber'];
+        return isset($this->_data['TaxFileNumber']) ? $this->_data['TaxFileNumber'] : null;
     }
 
     /**
@@ -249,7 +249,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string[]
      */
     public function getAustralianResidentForTaxPurposes() {
-        return $this->_data['AustralianResidentForTaxPurposes'];
+        return isset($this->_data['AustralianResidentForTaxPurposes']) ? $this->_data['AustralianResidentForTaxPurposes'] : null;
     }
 
     /**
@@ -266,7 +266,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string
      */
     public function getTaxFreeThresholdClaimed() {
-        return $this->_data['TaxFreeThresholdClaimed'];
+        return isset($this->_data['TaxFreeThresholdClaimed']) ? $this->_data['TaxFreeThresholdClaimed'] : null;
     }
 
     /**
@@ -283,7 +283,7 @@ class TaxDeclaration extends Remote\Object {
      * @return float
      */
     public function getTaxOffsetEstimatedAmount() {
-        return $this->_data['TaxOffsetEstimatedAmount'];
+        return isset($this->_data['TaxOffsetEstimatedAmount']) ? $this->_data['TaxOffsetEstimatedAmount'] : null;
     }
 
     /**
@@ -300,7 +300,7 @@ class TaxDeclaration extends Remote\Object {
      * @return bool
      */
     public function getHasHELPDebt() {
-        return $this->_data['HasHELPDebt'];
+        return isset($this->_data['HasHELPDebt']) ? $this->_data['HasHELPDebt'] : null;
     }
 
     /**
@@ -317,7 +317,7 @@ class TaxDeclaration extends Remote\Object {
      * @return bool
      */
     public function getHasSFSSDebt() {
-        return $this->_data['HasSFSSDebt'];
+        return isset($this->_data['HasSFSSDebt']) ? $this->_data['HasSFSSDebt'] : null;
     }
 
     /**
@@ -334,7 +334,7 @@ class TaxDeclaration extends Remote\Object {
      * @return bool
      */
     public function getHasTSLDebt() {
-        return $this->_data['HasTSLDebt'];
+        return isset($this->_data['HasTSLDebt']) ? $this->_data['HasTSLDebt'] : null;
     }
 
     /**
@@ -351,7 +351,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string
      */
     public function getUpwardVariationTaxWithholdingAmount() {
-        return $this->_data['UpwardVariationTaxWithholdingAmount'];
+        return isset($this->_data['UpwardVariationTaxWithholdingAmount']) ? $this->_data['UpwardVariationTaxWithholdingAmount'] : null;
     }
 
     /**
@@ -368,7 +368,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string
      */
     public function getEligibleToReceiveLeaveLoading() {
-        return $this->_data['EligibleToReceiveLeaveLoading'];
+        return isset($this->_data['EligibleToReceiveLeaveLoading']) ? $this->_data['EligibleToReceiveLeaveLoading'] : null;
     }
 
     /**
@@ -385,7 +385,7 @@ class TaxDeclaration extends Remote\Object {
      * @return string
      */
     public function getApprovedWithholdingVariationPercentage() {
-        return $this->_data['ApprovedWithholdingVariationPercentage'];
+        return isset($this->_data['ApprovedWithholdingVariationPercentage']) ? $this->_data['ApprovedWithholdingVariationPercentage'] : null;
     }
 
     /**

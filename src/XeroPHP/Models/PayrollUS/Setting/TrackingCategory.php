@@ -92,7 +92,7 @@ class TrackingCategory extends Remote\Object {
      * @return string
      */
     public function getTrackingCategoryID() {
-        return $this->_data['TrackingCategoryID'];
+        return isset($this->_data['TrackingCategoryID']) ? $this->_data['TrackingCategoryID'] : null;
     }
 
     /**
@@ -109,7 +109,7 @@ class TrackingCategory extends Remote\Object {
      * @return string
      */
     public function getTrackingCategoryName() {
-        return $this->_data['TrackingCategoryName'];
+        return isset($this->_data['TrackingCategoryName']) ? $this->_data['TrackingCategoryName'] : null;
     }
 
     /**

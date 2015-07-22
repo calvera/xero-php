@@ -99,7 +99,7 @@ class TaxComponent extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -116,7 +116,7 @@ class TaxComponent extends Remote\Object {
      * @return float
      */
     public function getRate() {
-        return $this->_data['Rate'];
+        return isset($this->_data['Rate']) ? $this->_data['Rate'] : null;
     }
 
     /**
@@ -133,7 +133,7 @@ class TaxComponent extends Remote\Object {
      * @return float
      */
     public function getIsCompound() {
-        return $this->_data['IsCompound'];
+        return isset($this->_data['IsCompound']) ? $this->_data['IsCompound'] : null;
     }
 
     /**

@@ -114,7 +114,7 @@ e.g.
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -131,7 +131,7 @@ e.g.
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -148,7 +148,7 @@ e.g.
      * @return string
      */
     public function getContactGroupID() {
-        return $this->_data['ContactGroupID'];
+        return isset($this->_data['ContactGroupID']) ? $this->_data['ContactGroupID'] : null;
     }
 
     /**
@@ -165,7 +165,7 @@ e.g.
      * @return Contact[]
      */
     public function getContacts() {
-        return $this->_data['Contacts'];
+        return isset($this->_data['Contacts']) ? $this->_data['Contacts'] : null;
     }
 
     /**

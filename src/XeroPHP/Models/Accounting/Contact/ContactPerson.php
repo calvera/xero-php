@@ -129,7 +129,7 @@ class ContactPerson extends Remote\Object {
      * @return string
      */
     public function getFirstName() {
-        return $this->_data['FirstName'];
+        return isset($this->_data['FirstName']) ? $this->_data['FirstName'] : null;
     }
 
     /**
@@ -146,7 +146,7 @@ class ContactPerson extends Remote\Object {
      * @return string
      */
     public function getLastName() {
-        return $this->_data['LastName'];
+        return isset($this->_data['LastName']) ? $this->_data['LastName'] : null;
     }
 
     /**
@@ -163,7 +163,7 @@ class ContactPerson extends Remote\Object {
      * @return string
      */
     public function getEmailAddress() {
-        return $this->_data['EmailAddress'];
+        return isset($this->_data['EmailAddress']) ? $this->_data['EmailAddress'] : null;
     }
 
     /**
@@ -180,7 +180,7 @@ class ContactPerson extends Remote\Object {
      * @return bool
      */
     public function getIncludeInEmails() {
-        return $this->_data['IncludeInEmails'];
+        return isset($this->_data['IncludeInEmails']) ? $this->_data['IncludeInEmails'] : null;
     }
 
     /**
@@ -197,7 +197,7 @@ class ContactPerson extends Remote\Object {
      * @return string
      */
     public function getContactID() {
-        return $this->_data['ContactID'];
+        return isset($this->_data['ContactID']) ? $this->_data['ContactID'] : null;
     }
 
     /**
@@ -214,7 +214,7 @@ class ContactPerson extends Remote\Object {
      * @return string
      */
     public function getContactNumber() {
-        return $this->_data['ContactNumber'];
+        return isset($this->_data['ContactNumber']) ? $this->_data['ContactNumber'] : null;
     }
 
     /**
@@ -232,7 +232,7 @@ class ContactPerson extends Remote\Object {
      * @deprecated
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**

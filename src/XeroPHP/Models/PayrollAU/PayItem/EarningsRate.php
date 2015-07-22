@@ -181,7 +181,7 @@ class EarningsRate extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -198,7 +198,7 @@ class EarningsRate extends Remote\Object {
      * @return string
      */
     public function getDisplayName() {
-        return $this->_data['DisplayName'];
+        return isset($this->_data['DisplayName']) ? $this->_data['DisplayName'] : null;
     }
 
     /**
@@ -215,7 +215,7 @@ class EarningsRate extends Remote\Object {
      * @return string
      */
     public function getAccountCode() {
-        return $this->_data['AccountCode'];
+        return isset($this->_data['AccountCode']) ? $this->_data['AccountCode'] : null;
     }
 
     /**
@@ -232,7 +232,7 @@ class EarningsRate extends Remote\Object {
      * @return string[]
      */
     public function getTypeOfUnits() {
-        return $this->_data['TypeOfUnits'];
+        return isset($this->_data['TypeOfUnits']) ? $this->_data['TypeOfUnits'] : null;
     }
 
     /**
@@ -249,7 +249,7 @@ class EarningsRate extends Remote\Object {
      * @return string
      */
     public function getIsExemptFromTax() {
-        return $this->_data['IsExemptFromTax'];
+        return isset($this->_data['IsExemptFromTax']) ? $this->_data['IsExemptFromTax'] : null;
     }
 
     /**
@@ -266,7 +266,7 @@ class EarningsRate extends Remote\Object {
      * @return string
      */
     public function getIsExemptFromSuper() {
-        return $this->_data['IsExemptFromSuper'];
+        return isset($this->_data['IsExemptFromSuper']) ? $this->_data['IsExemptFromSuper'] : null;
     }
 
     /**
@@ -283,7 +283,7 @@ class EarningsRate extends Remote\Object {
      * @return string
      */
     public function getEarningsType() {
-        return $this->_data['EarningsType'];
+        return isset($this->_data['EarningsType']) ? $this->_data['EarningsType'] : null;
     }
 
     /**
@@ -300,7 +300,7 @@ class EarningsRate extends Remote\Object {
      * @return string
      */
     public function getEarningsRateID() {
-        return $this->_data['EarningsRateID'];
+        return isset($this->_data['EarningsRateID']) ? $this->_data['EarningsRateID'] : null;
     }
 
     /**
@@ -317,7 +317,7 @@ class EarningsRate extends Remote\Object {
      * @return string
      */
     public function getRateType() {
-        return $this->_data['RateType'];
+        return isset($this->_data['RateType']) ? $this->_data['RateType'] : null;
     }
 
     /**
@@ -334,7 +334,7 @@ class EarningsRate extends Remote\Object {
      * @return float
      */
     public function getRatePerUnit() {
-        return $this->_data['RatePerUnit'];
+        return isset($this->_data['RatePerUnit']) ? $this->_data['RatePerUnit'] : null;
     }
 
     /**
@@ -351,7 +351,7 @@ class EarningsRate extends Remote\Object {
      * @return float
      */
     public function getMultiplier() {
-        return $this->_data['Multiplier'];
+        return isset($this->_data['Multiplier']) ? $this->_data['Multiplier'] : null;
     }
 
     /**
@@ -368,7 +368,7 @@ class EarningsRate extends Remote\Object {
      * @return float
      */
     public function getAccrueLeave() {
-        return $this->_data['AccrueLeave'];
+        return isset($this->_data['AccrueLeave']) ? $this->_data['AccrueLeave'] : null;
     }
 
     /**
@@ -385,7 +385,7 @@ class EarningsRate extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**

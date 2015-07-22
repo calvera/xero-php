@@ -109,7 +109,7 @@ class SuperFundProduct extends Remote\Object {
      * @return string
      */
     public function getABN() {
-        return $this->_data['ABN'];
+        return isset($this->_data['ABN']) ? $this->_data['ABN'] : null;
     }
 
     /**
@@ -126,7 +126,7 @@ class SuperFundProduct extends Remote\Object {
      * @return string
      */
     public function getUSI() {
-        return $this->_data['USI'];
+        return isset($this->_data['USI']) ? $this->_data['USI'] : null;
     }
 
     /**
@@ -144,7 +144,7 @@ class SuperFundProduct extends Remote\Object {
      * @deprecated
      */
     public function getSPIN() {
-        return $this->_data['SPIN'];
+        return isset($this->_data['SPIN']) ? $this->_data['SPIN'] : null;
     }
 
     /**
@@ -162,7 +162,7 @@ class SuperFundProduct extends Remote\Object {
      * @return string
      */
     public function getProductName() {
-        return $this->_data['ProductName'];
+        return isset($this->_data['ProductName']) ? $this->_data['ProductName'] : null;
     }
 
     /**

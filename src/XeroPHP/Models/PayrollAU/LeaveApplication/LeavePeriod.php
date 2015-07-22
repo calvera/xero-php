@@ -106,7 +106,7 @@ class LeavePeriod extends Remote\Object {
      * @return string[]
      */
     public function getNumberOfUnits() {
-        return $this->_data['NumberOfUnits'];
+        return isset($this->_data['NumberOfUnits']) ? $this->_data['NumberOfUnits'] : null;
     }
 
     /**
@@ -123,7 +123,7 @@ class LeavePeriod extends Remote\Object {
      * @return \DateTime
      */
     public function getPayPeriodEndDate() {
-        return $this->_data['PayPeriodEndDate'];
+        return isset($this->_data['PayPeriodEndDate']) ? $this->_data['PayPeriodEndDate'] : null;
     }
 
     /**
@@ -140,7 +140,7 @@ class LeavePeriod extends Remote\Object {
      * @return \DateTime
      */
     public function getPayPeriodStartDate() {
-        return $this->_data['PayPeriodStartDate'];
+        return isset($this->_data['PayPeriodStartDate']) ? $this->_data['PayPeriodStartDate'] : null;
     }
 
     /**
@@ -157,7 +157,7 @@ class LeavePeriod extends Remote\Object {
      * @return string
      */
     public function getLeavePeriodStatus() {
-        return $this->_data['LeavePeriodStatus'];
+        return isset($this->_data['LeavePeriodStatus']) ? $this->_data['LeavePeriodStatus'] : null;
     }
 
     /**

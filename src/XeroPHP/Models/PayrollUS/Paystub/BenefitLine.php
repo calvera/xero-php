@@ -92,7 +92,7 @@ class BenefitLine extends Remote\Object {
      * @return string
      */
     public function getBenefitTypeID() {
-        return $this->_data['BenefitTypeID'];
+        return isset($this->_data['BenefitTypeID']) ? $this->_data['BenefitTypeID'] : null;
     }
 
     /**
@@ -109,7 +109,7 @@ class BenefitLine extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**

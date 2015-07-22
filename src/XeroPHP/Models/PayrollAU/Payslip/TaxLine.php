@@ -107,7 +107,7 @@ class TaxLine extends Remote\Object {
      * @return string
      */
     public function getTaxTypeName() {
-        return $this->_data['TaxTypeName'];
+        return isset($this->_data['TaxTypeName']) ? $this->_data['TaxTypeName'] : null;
     }
 
     /**
@@ -124,7 +124,7 @@ class TaxLine extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -141,7 +141,7 @@ class TaxLine extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**
@@ -158,7 +158,7 @@ class TaxLine extends Remote\Object {
      * @return string
      */
     public function getLiabilityAccount() {
-        return $this->_data['LiabilityAccount'];
+        return isset($this->_data['LiabilityAccount']) ? $this->_data['LiabilityAccount'] : null;
     }
 
     /**

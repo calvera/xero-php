@@ -106,7 +106,7 @@ class DeductionLine extends Remote\Object {
      * @return string
      */
     public function getDeductionTypeID() {
-        return $this->_data['DeductionTypeID'];
+        return isset($this->_data['DeductionTypeID']) ? $this->_data['DeductionTypeID'] : null;
     }
 
     /**
@@ -123,7 +123,7 @@ class DeductionLine extends Remote\Object {
      * @return float
      */
     public function getCalculationType() {
-        return $this->_data['CalculationType'];
+        return isset($this->_data['CalculationType']) ? $this->_data['CalculationType'] : null;
     }
 
     /**
@@ -140,7 +140,7 @@ class DeductionLine extends Remote\Object {
      * @return string
      */
     public function getPercentage() {
-        return $this->_data['Percentage'];
+        return isset($this->_data['Percentage']) ? $this->_data['Percentage'] : null;
     }
 
     /**
@@ -157,7 +157,7 @@ class DeductionLine extends Remote\Object {
      * @return float[]
      */
     public function getNumberOfUnits() {
-        return $this->_data['NumberOfUnits'];
+        return isset($this->_data['NumberOfUnits']) ? $this->_data['NumberOfUnits'] : null;
     }
 
     /**

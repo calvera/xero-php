@@ -106,7 +106,7 @@ class ReimbursementLine extends Remote\Object {
      * @return string
      */
     public function getReimbursementTypeID() {
-        return $this->_data['ReimbursementTypeID'];
+        return isset($this->_data['ReimbursementTypeID']) ? $this->_data['ReimbursementTypeID'] : null;
     }
 
     /**
@@ -123,7 +123,7 @@ class ReimbursementLine extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -140,7 +140,7 @@ class ReimbursementLine extends Remote\Object {
      * @return string
      */
     public function getExpenseAccount() {
-        return $this->_data['ExpenseAccount'];
+        return isset($this->_data['ExpenseAccount']) ? $this->_data['ExpenseAccount'] : null;
     }
 
     /**
@@ -157,7 +157,7 @@ class ReimbursementLine extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**

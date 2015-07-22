@@ -106,7 +106,7 @@ class ExpenseClaim extends Remote\Object {
      * @return string
      */
     public function getExpenseClaimID() {
-        return $this->_data['ExpenseClaimID'];
+        return isset($this->_data['ExpenseClaimID']) ? $this->_data['ExpenseClaimID'] : null;
     }
 
     /**
@@ -123,7 +123,7 @@ class ExpenseClaim extends Remote\Object {
      * @return User
      */
     public function getUser() {
-        return $this->_data['User'];
+        return isset($this->_data['User']) ? $this->_data['User'] : null;
     }
 
     /**
@@ -140,7 +140,7 @@ class ExpenseClaim extends Remote\Object {
      * @return Receipt[]
      */
     public function getReceipts() {
-        return $this->_data['Receipts'];
+        return isset($this->_data['Receipts']) ? $this->_data['Receipts'] : null;
     }
 
     /**

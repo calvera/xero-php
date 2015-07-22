@@ -141,7 +141,7 @@ class ExpenseClaim extends Remote\Object {
      * @return string
      */
     public function getExpenseClaimID() {
-        return $this->_data['ExpenseClaimID'];
+        return isset($this->_data['ExpenseClaimID']) ? $this->_data['ExpenseClaimID'] : null;
     }
 
     /**
@@ -158,7 +158,7 @@ class ExpenseClaim extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
 
@@ -166,7 +166,7 @@ class ExpenseClaim extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
 
@@ -174,7 +174,7 @@ class ExpenseClaim extends Remote\Object {
      * @return float
      */
     public function getTotal() {
-        return $this->_data['Total'];
+        return isset($this->_data['Total']) ? $this->_data['Total'] : null;
     }
 
 
@@ -182,7 +182,7 @@ class ExpenseClaim extends Remote\Object {
      * @return float
      */
     public function getAmountDue() {
-        return $this->_data['AmountDue'];
+        return isset($this->_data['AmountDue']) ? $this->_data['AmountDue'] : null;
     }
 
 
@@ -190,7 +190,7 @@ class ExpenseClaim extends Remote\Object {
      * @return float
      */
     public function getAmountPaid() {
-        return $this->_data['AmountPaid'];
+        return isset($this->_data['AmountPaid']) ? $this->_data['AmountPaid'] : null;
     }
 
 
@@ -198,7 +198,7 @@ class ExpenseClaim extends Remote\Object {
      * @return \DateTime
      */
     public function getPaymentDueDate() {
-        return $this->_data['PaymentDueDate'];
+        return isset($this->_data['PaymentDueDate']) ? $this->_data['PaymentDueDate'] : null;
     }
 
 
@@ -206,7 +206,7 @@ class ExpenseClaim extends Remote\Object {
      * @return \DateTime
      */
     public function getReportingDate() {
-        return $this->_data['ReportingDate'];
+        return isset($this->_data['ReportingDate']) ? $this->_data['ReportingDate'] : null;
     }
 
 
@@ -214,7 +214,7 @@ class ExpenseClaim extends Remote\Object {
      * @return string
      */
     public function getReceiptID() {
-        return $this->_data['ReceiptID'];
+        return isset($this->_data['ReceiptID']) ? $this->_data['ReceiptID'] : null;
     }
 
     /**

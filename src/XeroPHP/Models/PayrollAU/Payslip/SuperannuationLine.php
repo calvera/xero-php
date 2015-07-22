@@ -141,7 +141,7 @@ class SuperannuationLine extends Remote\Object {
      * @return string
      */
     public function getSuperMembershipID() {
-        return $this->_data['SuperMembershipID'];
+        return isset($this->_data['SuperMembershipID']) ? $this->_data['SuperMembershipID'] : null;
     }
 
     /**
@@ -158,7 +158,7 @@ class SuperannuationLine extends Remote\Object {
      * @return string
      */
     public function getContributionType() {
-        return $this->_data['ContributionType'];
+        return isset($this->_data['ContributionType']) ? $this->_data['ContributionType'] : null;
     }
 
     /**
@@ -175,7 +175,7 @@ class SuperannuationLine extends Remote\Object {
      * @return string
      */
     public function getCalculationType() {
-        return $this->_data['CalculationType'];
+        return isset($this->_data['CalculationType']) ? $this->_data['CalculationType'] : null;
     }
 
     /**
@@ -192,7 +192,7 @@ class SuperannuationLine extends Remote\Object {
      * @return string[]
      */
     public function getMinimumMonthlyEarnings() {
-        return $this->_data['MinimumMonthlyEarnings'];
+        return isset($this->_data['MinimumMonthlyEarnings']) ? $this->_data['MinimumMonthlyEarnings'] : null;
     }
 
     /**
@@ -209,7 +209,7 @@ class SuperannuationLine extends Remote\Object {
      * @return string
      */
     public function getExpenseAccountCode() {
-        return $this->_data['ExpenseAccountCode'];
+        return isset($this->_data['ExpenseAccountCode']) ? $this->_data['ExpenseAccountCode'] : null;
     }
 
     /**
@@ -226,7 +226,7 @@ class SuperannuationLine extends Remote\Object {
      * @return string
      */
     public function getLiabilityAccountCode() {
-        return $this->_data['LiabilityAccountCode'];
+        return isset($this->_data['LiabilityAccountCode']) ? $this->_data['LiabilityAccountCode'] : null;
     }
 
     /**
@@ -243,7 +243,7 @@ class SuperannuationLine extends Remote\Object {
      * @return \DateTime
      */
     public function getPaymentDateForThisPeriod() {
-        return $this->_data['PaymentDateForThisPeriod'];
+        return isset($this->_data['PaymentDateForThisPeriod']) ? $this->_data['PaymentDateForThisPeriod'] : null;
     }
 
     /**
@@ -260,7 +260,7 @@ class SuperannuationLine extends Remote\Object {
      * @return string
      */
     public function getPercentage() {
-        return $this->_data['Percentage'];
+        return isset($this->_data['Percentage']) ? $this->_data['Percentage'] : null;
     }
 
     /**
@@ -277,7 +277,7 @@ class SuperannuationLine extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**

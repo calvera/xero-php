@@ -127,7 +127,7 @@ class MailingAddress extends Remote\Object {
      * @return string
      */
     public function getStreetAddress() {
-        return $this->_data['StreetAddress'];
+        return isset($this->_data['StreetAddress']) ? $this->_data['StreetAddress'] : null;
     }
 
     /**
@@ -144,7 +144,7 @@ class MailingAddress extends Remote\Object {
      * @return string
      */
     public function getSuiteOrAptOrUnit() {
-        return $this->_data['SuiteOrAptOrUnit'];
+        return isset($this->_data['SuiteOrAptOrUnit']) ? $this->_data['SuiteOrAptOrUnit'] : null;
     }
 
     /**
@@ -161,7 +161,7 @@ class MailingAddress extends Remote\Object {
      * @return string
      */
     public function getCity() {
-        return $this->_data['City'];
+        return isset($this->_data['City']) ? $this->_data['City'] : null;
     }
 
     /**
@@ -178,7 +178,7 @@ class MailingAddress extends Remote\Object {
      * @return string
      */
     public function getState() {
-        return $this->_data['State'];
+        return isset($this->_data['State']) ? $this->_data['State'] : null;
     }
 
     /**
@@ -195,7 +195,7 @@ class MailingAddress extends Remote\Object {
      * @return string
      */
     public function getZip() {
-        return $this->_data['Zip'];
+        return isset($this->_data['Zip']) ? $this->_data['Zip'] : null;
     }
 
     /**
@@ -212,7 +212,7 @@ class MailingAddress extends Remote\Object {
      * @return string
      */
     public function getLattitude() {
-        return $this->_data['Lattitude'];
+        return isset($this->_data['Lattitude']) ? $this->_data['Lattitude'] : null;
     }
 
     /**
@@ -229,7 +229,7 @@ class MailingAddress extends Remote\Object {
      * @return string
      */
     public function getLongitude() {
-        return $this->_data['Longitude'];
+        return isset($this->_data['Longitude']) ? $this->_data['Longitude'] : null;
     }
 
     /**

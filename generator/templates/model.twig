@@ -125,7 +125,7 @@ class {{ model.ClassName }} extends Remote\Object {
 {% endif %}
      */
     public function get{{ property.Name }}() {
-        return $this->_data['{{ property.Name }}'];
+        return isset($this->_data['{{ property.Name }}']) ? $this->_data['{{ property.Name }}'] : null;
     }
 
 {% if property.isReadOnly == false %}

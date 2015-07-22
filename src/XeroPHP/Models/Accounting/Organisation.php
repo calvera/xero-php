@@ -285,7 +285,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getAPIKey() {
-        return $this->_data['APIKey'];
+        return isset($this->_data['APIKey']) ? $this->_data['APIKey'] : null;
     }
 
     /**
@@ -302,7 +302,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -319,7 +319,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getLegalName() {
-        return $this->_data['LegalName'];
+        return isset($this->_data['LegalName']) ? $this->_data['LegalName'] : null;
     }
 
     /**
@@ -336,7 +336,7 @@ class Organisation extends Remote\Object {
      * @return bool
      */
     public function getPaysTax() {
-        return $this->_data['PaysTax'];
+        return isset($this->_data['PaysTax']) ? $this->_data['PaysTax'] : null;
     }
 
     /**
@@ -353,7 +353,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getVersion() {
-        return $this->_data['Version'];
+        return isset($this->_data['Version']) ? $this->_data['Version'] : null;
     }
 
     /**
@@ -370,7 +370,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getBaseCurrency() {
-        return $this->_data['BaseCurrency'];
+        return isset($this->_data['BaseCurrency']) ? $this->_data['BaseCurrency'] : null;
     }
 
     /**
@@ -387,7 +387,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getCountryCode() {
-        return $this->_data['CountryCode'];
+        return isset($this->_data['CountryCode']) ? $this->_data['CountryCode'] : null;
     }
 
     /**
@@ -404,7 +404,7 @@ class Organisation extends Remote\Object {
      * @return bool
      */
     public function getIsDemoCompany() {
-        return $this->_data['IsDemoCompany'];
+        return isset($this->_data['IsDemoCompany']) ? $this->_data['IsDemoCompany'] : null;
     }
 
     /**
@@ -421,7 +421,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getOrganisationStatus() {
-        return $this->_data['OrganisationStatus'];
+        return isset($this->_data['OrganisationStatus']) ? $this->_data['OrganisationStatus'] : null;
     }
 
     /**
@@ -438,7 +438,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getRegistrationNumber() {
-        return $this->_data['RegistrationNumber'];
+        return isset($this->_data['RegistrationNumber']) ? $this->_data['RegistrationNumber'] : null;
     }
 
     /**
@@ -455,7 +455,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getTaxNumber() {
-        return $this->_data['TaxNumber'];
+        return isset($this->_data['TaxNumber']) ? $this->_data['TaxNumber'] : null;
     }
 
     /**
@@ -472,7 +472,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getFinancialYearEndDay() {
-        return $this->_data['FinancialYearEndDay'];
+        return isset($this->_data['FinancialYearEndDay']) ? $this->_data['FinancialYearEndDay'] : null;
     }
 
     /**
@@ -489,7 +489,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getFinancialYearEndMonth() {
-        return $this->_data['FinancialYearEndMonth'];
+        return isset($this->_data['FinancialYearEndMonth']) ? $this->_data['FinancialYearEndMonth'] : null;
     }
 
     /**
@@ -506,7 +506,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getSalesTaxBasis() {
-        return $this->_data['SalesTaxBasis'];
+        return isset($this->_data['SalesTaxBasis']) ? $this->_data['SalesTaxBasis'] : null;
     }
 
     /**
@@ -523,7 +523,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getSalesTaxPeriod() {
-        return $this->_data['SalesTaxPeriod'];
+        return isset($this->_data['SalesTaxPeriod']) ? $this->_data['SalesTaxPeriod'] : null;
     }
 
     /**
@@ -540,7 +540,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getPeriodLockDate() {
-        return $this->_data['PeriodLockDate'];
+        return isset($this->_data['PeriodLockDate']) ? $this->_data['PeriodLockDate'] : null;
     }
 
     /**
@@ -557,7 +557,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getEndOfYearLockDate() {
-        return $this->_data['EndOfYearLockDate'];
+        return isset($this->_data['EndOfYearLockDate']) ? $this->_data['EndOfYearLockDate'] : null;
     }
 
     /**
@@ -574,7 +574,7 @@ class Organisation extends Remote\Object {
      * @return \DateTime
      */
     public function getCreatedDateUTC() {
-        return $this->_data['CreatedDateUTC'];
+        return isset($this->_data['CreatedDateUTC']) ? $this->_data['CreatedDateUTC'] : null;
     }
 
     /**
@@ -591,7 +591,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getOrganisationEntityType() {
-        return $this->_data['OrganisationEntityType'];
+        return isset($this->_data['OrganisationEntityType']) ? $this->_data['OrganisationEntityType'] : null;
     }
 
     /**
@@ -608,7 +608,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getTimezone() {
-        return $this->_data['Timezone'];
+        return isset($this->_data['Timezone']) ? $this->_data['Timezone'] : null;
     }
 
     /**
@@ -625,7 +625,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getShortCode() {
-        return $this->_data['ShortCode'];
+        return isset($this->_data['ShortCode']) ? $this->_data['ShortCode'] : null;
     }
 
     /**
@@ -642,7 +642,7 @@ class Organisation extends Remote\Object {
      * @return string
      */
     public function getLineOfBusiness() {
-        return $this->_data['LineOfBusiness'];
+        return isset($this->_data['LineOfBusiness']) ? $this->_data['LineOfBusiness'] : null;
     }
 
     /**
@@ -659,7 +659,7 @@ class Organisation extends Remote\Object {
      * @return Address[]
      */
     public function getAddresses() {
-        return $this->_data['Addresses'];
+        return isset($this->_data['Addresses']) ? $this->_data['Addresses'] : null;
     }
 
     /**
@@ -676,7 +676,7 @@ class Organisation extends Remote\Object {
      * @return Phone[]
      */
     public function getPhones() {
-        return $this->_data['Phones'];
+        return isset($this->_data['Phones']) ? $this->_data['Phones'] : null;
     }
 
     /**
@@ -693,7 +693,7 @@ class Organisation extends Remote\Object {
      * @return ExternalLink[]
      */
     public function getExternalLinks() {
-        return $this->_data['ExternalLinks'];
+        return isset($this->_data['ExternalLinks']) ? $this->_data['ExternalLinks'] : null;
     }
 
     /**
@@ -710,7 +710,7 @@ class Organisation extends Remote\Object {
      * @return PaymentTerm[]
      */
     public function getPaymentTerms() {
-        return $this->_data['PaymentTerms'];
+        return isset($this->_data['PaymentTerms']) ? $this->_data['PaymentTerms'] : null;
     }
 
     /**

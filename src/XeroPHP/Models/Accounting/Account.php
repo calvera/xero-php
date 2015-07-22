@@ -226,7 +226,7 @@ e.g.
             'Name' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
             'Type' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false),
             'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'EnablePaymentsToAccount' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
             'ShowInExpenseClaims' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
             'AccountID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
@@ -246,7 +246,7 @@ e.g.
      * @return string
      */
     public function getCode() {
-        return $this->_data['Code'];
+        return isset($this->_data['Code']) ? $this->_data['Code'] : null;
     }
 
     /**
@@ -263,7 +263,7 @@ e.g.
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -280,7 +280,7 @@ e.g.
      * @return string
      */
     public function getType() {
-        return $this->_data['Type'];
+        return isset($this->_data['Type']) ? $this->_data['Type'] : null;
     }
 
     /**
@@ -297,7 +297,7 @@ e.g.
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -314,7 +314,7 @@ e.g.
      * @return string
      */
     public function getTaxType() {
-        return $this->_data['TaxType'];
+        return isset($this->_data['TaxType']) ? $this->_data['TaxType'] : null;
     }
 
     /**
@@ -331,7 +331,7 @@ e.g.
      * @return bool
      */
     public function getEnablePaymentsToAccount() {
-        return $this->_data['EnablePaymentsToAccount'];
+        return isset($this->_data['EnablePaymentsToAccount']) ? $this->_data['EnablePaymentsToAccount'] : null;
     }
 
     /**
@@ -348,7 +348,7 @@ e.g.
      * @return bool
      */
     public function getShowInExpenseClaims() {
-        return $this->_data['ShowInExpenseClaims'];
+        return isset($this->_data['ShowInExpenseClaims']) ? $this->_data['ShowInExpenseClaims'] : null;
     }
 
     /**
@@ -365,7 +365,7 @@ e.g.
      * @return string
      */
     public function getAccountID() {
-        return $this->_data['AccountID'];
+        return isset($this->_data['AccountID']) ? $this->_data['AccountID'] : null;
     }
 
     /**
@@ -382,7 +382,7 @@ e.g.
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -399,7 +399,7 @@ e.g.
      * @return string
      */
     public function getClass() {
-        return $this->_data['Class'];
+        return isset($this->_data['Class']) ? $this->_data['Class'] : null;
     }
 
 
@@ -407,7 +407,7 @@ e.g.
      * @return string
      */
     public function getSystemAccount() {
-        return $this->_data['SystemAccount'];
+        return isset($this->_data['SystemAccount']) ? $this->_data['SystemAccount'] : null;
     }
 
 
@@ -415,7 +415,7 @@ e.g.
      * @return string
      */
     public function getBankAccountNumber() {
-        return $this->_data['BankAccountNumber'];
+        return isset($this->_data['BankAccountNumber']) ? $this->_data['BankAccountNumber'] : null;
     }
 
 
@@ -423,7 +423,7 @@ e.g.
      * @return string
      */
     public function getCurrencyCode() {
-        return $this->_data['CurrencyCode'];
+        return isset($this->_data['CurrencyCode']) ? $this->_data['CurrencyCode'] : null;
     }
 
 
@@ -431,7 +431,7 @@ e.g.
      * @return string
      */
     public function getReportingCode() {
-        return $this->_data['ReportingCode'];
+        return isset($this->_data['ReportingCode']) ? $this->_data['ReportingCode'] : null;
     }
 
 
@@ -439,7 +439,7 @@ e.g.
      * @return string
      */
     public function getReportingCodeName() {
-        return $this->_data['ReportingCodeName'];
+        return isset($this->_data['ReportingCodeName']) ? $this->_data['ReportingCodeName'] : null;
     }
 
 
@@ -447,7 +447,7 @@ e.g.
      * @return bool
      */
     public function getHasAttachments() {
-        return $this->_data['HasAttachments'];
+        return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
 

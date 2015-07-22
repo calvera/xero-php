@@ -122,7 +122,7 @@ class BankAccount extends Remote\Object {
      * @return string
      */
     public function getStatementText() {
-        return $this->_data['StatementText'];
+        return isset($this->_data['StatementText']) ? $this->_data['StatementText'] : null;
     }
 
     /**
@@ -139,7 +139,7 @@ class BankAccount extends Remote\Object {
      * @return string
      */
     public function getAccountName() {
-        return $this->_data['AccountName'];
+        return isset($this->_data['AccountName']) ? $this->_data['AccountName'] : null;
     }
 
     /**
@@ -156,7 +156,7 @@ class BankAccount extends Remote\Object {
      * @return string
      */
     public function getBSB() {
-        return $this->_data['BSB'];
+        return isset($this->_data['BSB']) ? $this->_data['BSB'] : null;
     }
 
     /**
@@ -173,7 +173,7 @@ class BankAccount extends Remote\Object {
      * @return string
      */
     public function getAccountNumber() {
-        return $this->_data['AccountNumber'];
+        return isset($this->_data['AccountNumber']) ? $this->_data['AccountNumber'] : null;
     }
 
     /**
@@ -190,7 +190,7 @@ class BankAccount extends Remote\Object {
      * @return string
      */
     public function getRemainder() {
-        return $this->_data['Remainder'];
+        return isset($this->_data['Remainder']) ? $this->_data['Remainder'] : null;
     }
 
     /**
@@ -207,7 +207,7 @@ class BankAccount extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**

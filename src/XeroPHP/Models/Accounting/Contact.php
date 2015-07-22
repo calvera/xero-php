@@ -114,12 +114,6 @@ class Contact extends Remote\Object {
      */
 
     /**
-     * UTC timestamp of last update to contact
-     *
-     * @property \DateTime UpdatedDateUTC
-     */
-
-    /**
      * true or false – Boolean that describes if a contact that has any AP invoices entered against them.
      * Cannot be set via PUT or POST – it is automatically set when an accounts payable invoice is
      * generated against this contact.
@@ -169,6 +163,12 @@ class Contact extends Remote\Object {
      * The default purchases tracking categories for contacts
      *
      * @property TrackingCategory[] PurchasesTrackingCategories
+     */
+
+    /**
+     * UTC timestamp of last update to contact
+     *
+     * @property \DateTime UpdatedDateUTC
      */
 
     /**
@@ -305,7 +305,6 @@ class Contact extends Remote\Object {
             'AccountsPayableTaxType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'Addresses' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Address', true, false),
             'Phones' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Phone', true, false),
-            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTime', false, false),
             'IsSupplier' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
             'IsCustomer' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
             'DefaultCurrency' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
@@ -314,6 +313,7 @@ class Contact extends Remote\Object {
             'PurchasesDefaultAccountCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'SalesTrackingCategories' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TrackingCategory', true, false),
             'PurchasesTrackingCategories' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TrackingCategory', true, false),
+            'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTime', false, false),
             'ContactGroups' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\ContactGroup', true, false),
             'Website' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'BrandingTheme' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\BrandingTheme', false, false),
@@ -330,7 +330,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getContactID() {
-        return $this->_data['ContactID'];
+        return isset($this->_data['ContactID']) ? $this->_data['ContactID'] : null;
     }
 
     /**
@@ -347,7 +347,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getContactNumber() {
-        return $this->_data['ContactNumber'];
+        return isset($this->_data['ContactNumber']) ? $this->_data['ContactNumber'] : null;
     }
 
     /**
@@ -364,7 +364,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getAccountNumber() {
-        return $this->_data['AccountNumber'];
+        return isset($this->_data['AccountNumber']) ? $this->_data['AccountNumber'] : null;
     }
 
     /**
@@ -381,7 +381,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getContactStatus() {
-        return $this->_data['ContactStatus'];
+        return isset($this->_data['ContactStatus']) ? $this->_data['ContactStatus'] : null;
     }
 
     /**
@@ -398,7 +398,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -415,7 +415,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getFirstName() {
-        return $this->_data['FirstName'];
+        return isset($this->_data['FirstName']) ? $this->_data['FirstName'] : null;
     }
 
     /**
@@ -432,7 +432,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getLastName() {
-        return $this->_data['LastName'];
+        return isset($this->_data['LastName']) ? $this->_data['LastName'] : null;
     }
 
     /**
@@ -449,7 +449,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getEmailAddress() {
-        return $this->_data['EmailAddress'];
+        return isset($this->_data['EmailAddress']) ? $this->_data['EmailAddress'] : null;
     }
 
     /**
@@ -466,7 +466,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getSkypeUserName() {
-        return $this->_data['SkypeUserName'];
+        return isset($this->_data['SkypeUserName']) ? $this->_data['SkypeUserName'] : null;
     }
 
     /**
@@ -483,7 +483,7 @@ class Contact extends Remote\Object {
      * @return ContactPerson[]
      */
     public function getContactPersons() {
-        return $this->_data['ContactPersons'];
+        return isset($this->_data['ContactPersons']) ? $this->_data['ContactPersons'] : null;
     }
 
     /**
@@ -500,7 +500,7 @@ class Contact extends Remote\Object {
      * @return string[]
      */
     public function getBankAccountDetails() {
-        return $this->_data['BankAccountDetails'];
+        return isset($this->_data['BankAccountDetails']) ? $this->_data['BankAccountDetails'] : null;
     }
 
     /**
@@ -517,7 +517,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getTaxNumber() {
-        return $this->_data['TaxNumber'];
+        return isset($this->_data['TaxNumber']) ? $this->_data['TaxNumber'] : null;
     }
 
     /**
@@ -534,7 +534,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getAccountsReceivableTaxType() {
-        return $this->_data['AccountsReceivableTaxType'];
+        return isset($this->_data['AccountsReceivableTaxType']) ? $this->_data['AccountsReceivableTaxType'] : null;
     }
 
     /**
@@ -551,7 +551,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getAccountsPayableTaxType() {
-        return $this->_data['AccountsPayableTaxType'];
+        return isset($this->_data['AccountsPayableTaxType']) ? $this->_data['AccountsPayableTaxType'] : null;
     }
 
     /**
@@ -568,7 +568,7 @@ class Contact extends Remote\Object {
      * @return Address[]
      */
     public function getAddresses() {
-        return $this->_data['Addresses'];
+        return isset($this->_data['Addresses']) ? $this->_data['Addresses'] : null;
     }
 
     /**
@@ -585,7 +585,7 @@ class Contact extends Remote\Object {
      * @return Phone[]
      */
     public function getPhones() {
-        return $this->_data['Phones'];
+        return isset($this->_data['Phones']) ? $this->_data['Phones'] : null;
     }
 
     /**
@@ -599,27 +599,10 @@ class Contact extends Remote\Object {
     }
 
     /**
-     * @return \DateTime
-     */
-    public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
-    }
-
-    /**
-     * @param \DateTime $value
-     * @return Contact
-     */
-    public function setUpdatedDateUTC(\DateTime $value) {
-        $this->propertyUpdated('UpdatedDateUTC', $value);
-        $this->_data['UpdatedDateUTC'] = $value;
-        return $this;
-    }
-
-    /**
      * @return bool
      */
     public function getIsSupplier() {
-        return $this->_data['IsSupplier'];
+        return isset($this->_data['IsSupplier']) ? $this->_data['IsSupplier'] : null;
     }
 
     /**
@@ -636,7 +619,7 @@ class Contact extends Remote\Object {
      * @return bool
      */
     public function getIsCustomer() {
-        return $this->_data['IsCustomer'];
+        return isset($this->_data['IsCustomer']) ? $this->_data['IsCustomer'] : null;
     }
 
     /**
@@ -653,7 +636,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getDefaultCurrency() {
-        return $this->_data['DefaultCurrency'];
+        return isset($this->_data['DefaultCurrency']) ? $this->_data['DefaultCurrency'] : null;
     }
 
     /**
@@ -670,7 +653,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getXeroNetworkKey() {
-        return $this->_data['XeroNetworkKey'];
+        return isset($this->_data['XeroNetworkKey']) ? $this->_data['XeroNetworkKey'] : null;
     }
 
     /**
@@ -687,7 +670,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getSalesDefaultAccountCode() {
-        return $this->_data['SalesDefaultAccountCode'];
+        return isset($this->_data['SalesDefaultAccountCode']) ? $this->_data['SalesDefaultAccountCode'] : null;
     }
 
     /**
@@ -704,7 +687,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getPurchasesDefaultAccountCode() {
-        return $this->_data['PurchasesDefaultAccountCode'];
+        return isset($this->_data['PurchasesDefaultAccountCode']) ? $this->_data['PurchasesDefaultAccountCode'] : null;
     }
 
     /**
@@ -721,7 +704,7 @@ class Contact extends Remote\Object {
      * @return TrackingCategory[]
      */
     public function getSalesTrackingCategories() {
-        return $this->_data['SalesTrackingCategories'];
+        return isset($this->_data['SalesTrackingCategories']) ? $this->_data['SalesTrackingCategories'] : null;
     }
 
     /**
@@ -738,7 +721,7 @@ class Contact extends Remote\Object {
      * @return TrackingCategory[]
      */
     public function getPurchasesTrackingCategories() {
-        return $this->_data['PurchasesTrackingCategories'];
+        return isset($this->_data['PurchasesTrackingCategories']) ? $this->_data['PurchasesTrackingCategories'] : null;
     }
 
     /**
@@ -752,10 +735,27 @@ class Contact extends Remote\Object {
     }
 
     /**
+     * @return \DateTime
+     */
+    public function getUpdatedDateUTC() {
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
+    }
+
+    /**
+     * @param \DateTime $value
+     * @return Contact
+     */
+    public function setUpdatedDateUTC(\DateTime $value) {
+        $this->propertyUpdated('UpdatedDateUTC', $value);
+        $this->_data['UpdatedDateUTC'] = $value;
+        return $this;
+    }
+
+    /**
      * @return ContactGroup[]
      */
     public function getContactGroups() {
-        return $this->_data['ContactGroups'];
+        return isset($this->_data['ContactGroups']) ? $this->_data['ContactGroups'] : null;
     }
 
     /**
@@ -772,7 +772,7 @@ class Contact extends Remote\Object {
      * @return string
      */
     public function getWebsite() {
-        return $this->_data['Website'];
+        return isset($this->_data['Website']) ? $this->_data['Website'] : null;
     }
 
     /**
@@ -789,7 +789,7 @@ class Contact extends Remote\Object {
      * @return BrandingTheme
      */
     public function getBrandingTheme() {
-        return $this->_data['BrandingTheme'];
+        return isset($this->_data['BrandingTheme']) ? $this->_data['BrandingTheme'] : null;
     }
 
     /**
@@ -806,7 +806,7 @@ class Contact extends Remote\Object {
      * @return string[]
      */
     public function getBatchPayments() {
-        return $this->_data['BatchPayments'];
+        return isset($this->_data['BatchPayments']) ? $this->_data['BatchPayments'] : null;
     }
 
     /**
@@ -823,7 +823,7 @@ class Contact extends Remote\Object {
      * @return float
      */
     public function getDiscount() {
-        return $this->_data['Discount'];
+        return isset($this->_data['Discount']) ? $this->_data['Discount'] : null;
     }
 
     /**
@@ -840,7 +840,7 @@ class Contact extends Remote\Object {
      * @return string[]
      */
     public function getBalances() {
-        return $this->_data['Balances'];
+        return isset($this->_data['Balances']) ? $this->_data['Balances'] : null;
     }
 
     /**
@@ -857,7 +857,7 @@ class Contact extends Remote\Object {
      * @return PaymentTerm[]
      */
     public function getPaymentTerms() {
-        return $this->_data['PaymentTerms'];
+        return isset($this->_data['PaymentTerms']) ? $this->_data['PaymentTerms'] : null;
     }
 
     /**
@@ -874,7 +874,7 @@ class Contact extends Remote\Object {
      * @return bool
      */
     public function getHasAttachments() {
-        return $this->_data['HasAttachments'];
+        return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
     /**

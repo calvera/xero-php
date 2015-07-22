@@ -228,7 +228,7 @@ class Payslip extends Remote\Object {
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -245,7 +245,7 @@ class Payslip extends Remote\Object {
      * @return string
      */
     public function getPayslipID() {
-        return $this->_data['PayslipID'];
+        return isset($this->_data['PayslipID']) ? $this->_data['PayslipID'] : null;
     }
 
     /**
@@ -262,7 +262,7 @@ class Payslip extends Remote\Object {
      * @return EarningsLine[]
      */
     public function getEarningsLines() {
-        return $this->_data['EarningsLines'];
+        return isset($this->_data['EarningsLines']) ? $this->_data['EarningsLines'] : null;
     }
 
     /**
@@ -279,7 +279,7 @@ class Payslip extends Remote\Object {
      * @return TimesheetEarningsLine[]
      */
     public function getTimesheetEarningsLines() {
-        return $this->_data['TimesheetEarningsLines'];
+        return isset($this->_data['TimesheetEarningsLines']) ? $this->_data['TimesheetEarningsLines'] : null;
     }
 
     /**
@@ -296,7 +296,7 @@ class Payslip extends Remote\Object {
      * @return DeductionLine[]
      */
     public function getDeductionLines() {
-        return $this->_data['DeductionLines'];
+        return isset($this->_data['DeductionLines']) ? $this->_data['DeductionLines'] : null;
     }
 
     /**
@@ -313,7 +313,7 @@ class Payslip extends Remote\Object {
      * @return LeaveAccrualLine[]
      */
     public function getLeaveAccrualLines() {
-        return $this->_data['LeaveAccrualLines'];
+        return isset($this->_data['LeaveAccrualLines']) ? $this->_data['LeaveAccrualLines'] : null;
     }
 
     /**
@@ -330,7 +330,7 @@ class Payslip extends Remote\Object {
      * @return ReimbursementLine[]
      */
     public function getReimbursementLines() {
-        return $this->_data['ReimbursementLines'];
+        return isset($this->_data['ReimbursementLines']) ? $this->_data['ReimbursementLines'] : null;
     }
 
     /**
@@ -347,7 +347,7 @@ class Payslip extends Remote\Object {
      * @return SuperannuationLine[]
      */
     public function getSuperannuationLines() {
-        return $this->_data['SuperannuationLines'];
+        return isset($this->_data['SuperannuationLines']) ? $this->_data['SuperannuationLines'] : null;
     }
 
     /**
@@ -364,7 +364,7 @@ class Payslip extends Remote\Object {
      * @return TaxLine[]
      */
     public function getTaxLines() {
-        return $this->_data['TaxLines'];
+        return isset($this->_data['TaxLines']) ? $this->_data['TaxLines'] : null;
     }
 
     /**
@@ -381,7 +381,7 @@ class Payslip extends Remote\Object {
      * @return string
      */
     public function getFirstName() {
-        return $this->_data['FirstName'];
+        return isset($this->_data['FirstName']) ? $this->_data['FirstName'] : null;
     }
 
 
@@ -389,7 +389,7 @@ class Payslip extends Remote\Object {
      * @return string
      */
     public function getLastName() {
-        return $this->_data['LastName'];
+        return isset($this->_data['LastName']) ? $this->_data['LastName'] : null;
     }
 
 
@@ -397,7 +397,7 @@ class Payslip extends Remote\Object {
      * @return string
      */
     public function getEmployeeGroup() {
-        return $this->_data['EmployeeGroup'];
+        return isset($this->_data['EmployeeGroup']) ? $this->_data['EmployeeGroup'] : null;
     }
 
 
@@ -405,7 +405,7 @@ class Payslip extends Remote\Object {
      * @return string
      */
     public function getLastEdited() {
-        return $this->_data['LastEdited'];
+        return isset($this->_data['LastEdited']) ? $this->_data['LastEdited'] : null;
     }
 
 
@@ -413,7 +413,7 @@ class Payslip extends Remote\Object {
      * @return float[]
      */
     public function getWages() {
-        return $this->_data['Wages'];
+        return isset($this->_data['Wages']) ? $this->_data['Wages'] : null;
     }
 
 
@@ -421,7 +421,7 @@ class Payslip extends Remote\Object {
      * @return float[]
      */
     public function getDeductions() {
-        return $this->_data['Deductions'];
+        return isset($this->_data['Deductions']) ? $this->_data['Deductions'] : null;
     }
 
 
@@ -429,7 +429,7 @@ class Payslip extends Remote\Object {
      * @return float
      */
     public function getNetPay() {
-        return $this->_data['NetPay'];
+        return isset($this->_data['NetPay']) ? $this->_data['NetPay'] : null;
     }
 
 
@@ -437,7 +437,7 @@ class Payslip extends Remote\Object {
      * @return float
      */
     public function getTax() {
-        return $this->_data['Tax'];
+        return isset($this->_data['Tax']) ? $this->_data['Tax'] : null;
     }
 
 
@@ -445,7 +445,7 @@ class Payslip extends Remote\Object {
      * @return float
      */
     public function getSuper() {
-        return $this->_data['Super'];
+        return isset($this->_data['Super']) ? $this->_data['Super'] : null;
     }
 
 
@@ -453,7 +453,7 @@ class Payslip extends Remote\Object {
      * @return float[]
      */
     public function getReimbursements() {
-        return $this->_data['Reimbursements'];
+        return isset($this->_data['Reimbursements']) ? $this->_data['Reimbursements'] : null;
     }
 
 
@@ -461,7 +461,7 @@ class Payslip extends Remote\Object {
      * @return LeaveEarningsLine[]
      */
     public function getLeaveEarningsLines() {
-        return $this->_data['LeaveEarningsLines'];
+        return isset($this->_data['LeaveEarningsLines']) ? $this->_data['LeaveEarningsLines'] : null;
     }
 
 

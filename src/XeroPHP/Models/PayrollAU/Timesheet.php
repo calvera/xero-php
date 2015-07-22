@@ -134,7 +134,7 @@ class Timesheet extends Remote\Object {
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -151,7 +151,7 @@ class Timesheet extends Remote\Object {
      * @return \DateTime
      */
     public function getStartDate() {
-        return $this->_data['StartDate'];
+        return isset($this->_data['StartDate']) ? $this->_data['StartDate'] : null;
     }
 
     /**
@@ -168,7 +168,7 @@ class Timesheet extends Remote\Object {
      * @return \DateTime
      */
     public function getEndDate() {
-        return $this->_data['EndDate'];
+        return isset($this->_data['EndDate']) ? $this->_data['EndDate'] : null;
     }
 
     /**
@@ -185,7 +185,7 @@ class Timesheet extends Remote\Object {
      * @return TimesheetLine[]
      */
     public function getTimesheetLines() {
-        return $this->_data['TimesheetLines'];
+        return isset($this->_data['TimesheetLines']) ? $this->_data['TimesheetLines'] : null;
     }
 
     /**
@@ -202,7 +202,7 @@ class Timesheet extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -219,7 +219,7 @@ class Timesheet extends Remote\Object {
      * @return string[]
      */
     public function getHours() {
-        return $this->_data['Hours'];
+        return isset($this->_data['Hours']) ? $this->_data['Hours'] : null;
     }
 
     /**
@@ -236,7 +236,7 @@ class Timesheet extends Remote\Object {
      * @return string
      */
     public function getTimesheetID() {
-        return $this->_data['TimesheetID'];
+        return isset($this->_data['TimesheetID']) ? $this->_data['TimesheetID'] : null;
     }
 
     /**

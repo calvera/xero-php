@@ -120,7 +120,7 @@ The description of the link is auto-generated in the form “Go to <App name>”
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -137,7 +137,7 @@ The description of the link is auto-generated in the form “Go to <App name>”
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -154,7 +154,7 @@ The description of the link is auto-generated in the form “Go to <App name>”
      * @return string
      */
     public function getFirstName() {
-        return $this->_data['FirstName'];
+        return isset($this->_data['FirstName']) ? $this->_data['FirstName'] : null;
     }
 
     /**
@@ -171,7 +171,7 @@ The description of the link is auto-generated in the form “Go to <App name>”
      * @return string
      */
     public function getLastName() {
-        return $this->_data['LastName'];
+        return isset($this->_data['LastName']) ? $this->_data['LastName'] : null;
     }
 
     /**
@@ -188,7 +188,7 @@ The description of the link is auto-generated in the form “Go to <App name>”
      * @return ExternalLink
      */
     public function getExternalLink() {
-        return $this->_data['ExternalLink'];
+        return isset($this->_data['ExternalLink']) ? $this->_data['ExternalLink'] : null;
     }
 
     /**

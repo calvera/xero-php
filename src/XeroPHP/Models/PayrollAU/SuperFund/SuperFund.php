@@ -180,7 +180,7 @@ A UTC timestamp
      * @return string
      */
     public function getType() {
-        return $this->_data['Type'];
+        return isset($this->_data['Type']) ? $this->_data['Type'] : null;
     }
 
     /**
@@ -197,7 +197,7 @@ A UTC timestamp
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -214,7 +214,7 @@ A UTC timestamp
      * @return string
      */
     public function getABN() {
-        return $this->_data['ABN'];
+        return isset($this->_data['ABN']) ? $this->_data['ABN'] : null;
     }
 
     /**
@@ -231,7 +231,7 @@ A UTC timestamp
      * @return string
      */
     public function getBSB() {
-        return $this->_data['BSB'];
+        return isset($this->_data['BSB']) ? $this->_data['BSB'] : null;
     }
 
     /**
@@ -248,7 +248,7 @@ A UTC timestamp
      * @return string
      */
     public function getAccountNumber() {
-        return $this->_data['AccountNumber'];
+        return isset($this->_data['AccountNumber']) ? $this->_data['AccountNumber'] : null;
     }
 
     /**
@@ -265,7 +265,7 @@ A UTC timestamp
      * @return string
      */
     public function getAccountName() {
-        return $this->_data['AccountName'];
+        return isset($this->_data['AccountName']) ? $this->_data['AccountName'] : null;
     }
 
     /**
@@ -282,7 +282,7 @@ A UTC timestamp
      * @return string
      */
     public function getElectronicServiceAddress() {
-        return $this->_data['ElectronicServiceAddress'];
+        return isset($this->_data['ElectronicServiceAddress']) ? $this->_data['ElectronicServiceAddress'] : null;
     }
 
     /**
@@ -299,7 +299,7 @@ A UTC timestamp
      * @return string
      */
     public function getSuperFundID() {
-        return $this->_data['SuperFundID'];
+        return isset($this->_data['SuperFundID']) ? $this->_data['SuperFundID'] : null;
     }
 
     /**
@@ -316,7 +316,7 @@ A UTC timestamp
      * @return string
      */
     public function getEmployerNumber() {
-        return $this->_data['EmployerNumber'];
+        return isset($this->_data['EmployerNumber']) ? $this->_data['EmployerNumber'] : null;
     }
 
     /**
@@ -334,7 +334,7 @@ A UTC timestamp
      * @deprecated
      */
     public function getSPIN() {
-        return $this->_data['SPIN'];
+        return isset($this->_data['SPIN']) ? $this->_data['SPIN'] : null;
     }
 
     /**
@@ -352,7 +352,7 @@ A UTC timestamp
      * @return string
      */
     public function getRecordfilter() {
-        return $this->_data['Recordfilter'];
+        return isset($this->_data['Recordfilter']) ? $this->_data['Recordfilter'] : null;
     }
 
     /**
@@ -369,7 +369,7 @@ A UTC timestamp
      * @return string
      */
     public function get() {
-        return $this->_data[''];
+        return isset($this->_data['']) ? $this->_data[''] : null;
     }
 
     /**
@@ -386,7 +386,7 @@ A UTC timestamp
      * @return \DateTime
      */
     public function getModifiedAfter() {
-        return $this->_data['ModifiedAfter'];
+        return isset($this->_data['ModifiedAfter']) ? $this->_data['ModifiedAfter'] : null;
     }
 
     /**

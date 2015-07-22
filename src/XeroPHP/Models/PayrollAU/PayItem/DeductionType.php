@@ -115,7 +115,7 @@ class DeductionType extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -132,7 +132,7 @@ class DeductionType extends Remote\Object {
      * @return string
      */
     public function getAccountCode() {
-        return $this->_data['AccountCode'];
+        return isset($this->_data['AccountCode']) ? $this->_data['AccountCode'] : null;
     }
 
     /**
@@ -149,7 +149,7 @@ class DeductionType extends Remote\Object {
      * @return float
      */
     public function getReducesTax() {
-        return $this->_data['ReducesTax'];
+        return isset($this->_data['ReducesTax']) ? $this->_data['ReducesTax'] : null;
     }
 
     /**
@@ -166,7 +166,7 @@ class DeductionType extends Remote\Object {
      * @return string
      */
     public function getReducesSuper() {
-        return $this->_data['ReducesSuper'];
+        return isset($this->_data['ReducesSuper']) ? $this->_data['ReducesSuper'] : null;
     }
 
     /**
@@ -183,7 +183,7 @@ class DeductionType extends Remote\Object {
      * @return string
      */
     public function getDeductionTypeID() {
-        return $this->_data['DeductionTypeID'];
+        return isset($this->_data['DeductionTypeID']) ? $this->_data['DeductionTypeID'] : null;
     }
 
     /**

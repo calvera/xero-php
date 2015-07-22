@@ -71,7 +71,7 @@ class Payment extends Remote\Object {
      */
 
     /**
-     * The status of the payment. This will always be AUTHORISED
+     * The status of the payment.
      *
      * @property string Status
      */
@@ -187,7 +187,7 @@ class Payment extends Remote\Object {
             'Amount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'Reference' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'IsReconciled' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'Status' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
             'PaymentType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
             'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTime', false, false),
             'PaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
@@ -199,7 +199,7 @@ class Payment extends Remote\Object {
      * @return Invoice
      */
     public function getInvoice() {
-        return $this->_data['Invoice'];
+        return isset($this->_data['Invoice']) ? $this->_data['Invoice'] : null;
     }
 
     /**
@@ -216,7 +216,7 @@ class Payment extends Remote\Object {
      * @return CreditNote
      */
     public function getCreditNote() {
-        return $this->_data['CreditNote'];
+        return isset($this->_data['CreditNote']) ? $this->_data['CreditNote'] : null;
     }
 
     /**
@@ -233,7 +233,7 @@ class Payment extends Remote\Object {
      * @return Prepayment
      */
     public function getPrepayment() {
-        return $this->_data['Prepayment'];
+        return isset($this->_data['Prepayment']) ? $this->_data['Prepayment'] : null;
     }
 
     /**
@@ -250,7 +250,7 @@ class Payment extends Remote\Object {
      * @return Overpayment
      */
     public function getOverpayment() {
-        return $this->_data['Overpayment'];
+        return isset($this->_data['Overpayment']) ? $this->_data['Overpayment'] : null;
     }
 
     /**
@@ -267,7 +267,7 @@ class Payment extends Remote\Object {
      * @return Account
      */
     public function getAccount() {
-        return $this->_data['Account'];
+        return isset($this->_data['Account']) ? $this->_data['Account'] : null;
     }
 
     /**
@@ -284,7 +284,7 @@ class Payment extends Remote\Object {
      * @return \DateTime
      */
     public function getDate() {
-        return $this->_data['Date'];
+        return isset($this->_data['Date']) ? $this->_data['Date'] : null;
     }
 
     /**
@@ -301,7 +301,7 @@ class Payment extends Remote\Object {
      * @return float
      */
     public function getCurrencyRate() {
-        return $this->_data['CurrencyRate'];
+        return isset($this->_data['CurrencyRate']) ? $this->_data['CurrencyRate'] : null;
     }
 
     /**
@@ -318,7 +318,7 @@ class Payment extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**
@@ -335,7 +335,7 @@ class Payment extends Remote\Object {
      * @return string
      */
     public function getReference() {
-        return $this->_data['Reference'];
+        return isset($this->_data['Reference']) ? $this->_data['Reference'] : null;
     }
 
     /**
@@ -352,7 +352,7 @@ class Payment extends Remote\Object {
      * @return string
      */
     public function getIsReconciled() {
-        return $this->_data['IsReconciled'];
+        return isset($this->_data['IsReconciled']) ? $this->_data['IsReconciled'] : null;
     }
 
     /**
@@ -369,7 +369,7 @@ class Payment extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
 
@@ -377,7 +377,7 @@ class Payment extends Remote\Object {
      * @return string
      */
     public function getPaymentType() {
-        return $this->_data['PaymentType'];
+        return isset($this->_data['PaymentType']) ? $this->_data['PaymentType'] : null;
     }
 
 
@@ -385,7 +385,7 @@ class Payment extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
 
@@ -393,7 +393,7 @@ class Payment extends Remote\Object {
      * @return string
      */
     public function getPaymentID() {
-        return $this->_data['PaymentID'];
+        return isset($this->_data['PaymentID']) ? $this->_data['PaymentID'] : null;
     }
 
     /**

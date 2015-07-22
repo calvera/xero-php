@@ -111,7 +111,7 @@ class JournalLine extends Remote\Object {
             'LineAmount' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
             'AccountCode' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
             'Description' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'Tracking' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'TaxAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false)
         );
@@ -122,7 +122,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getLineAmount() {
-        return $this->_data['LineAmount'];
+        return isset($this->_data['LineAmount']) ? $this->_data['LineAmount'] : null;
     }
 
     /**
@@ -139,7 +139,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getAccountCode() {
-        return $this->_data['AccountCode'];
+        return isset($this->_data['AccountCode']) ? $this->_data['AccountCode'] : null;
     }
 
     /**
@@ -156,7 +156,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -173,7 +173,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getTaxType() {
-        return $this->_data['TaxType'];
+        return isset($this->_data['TaxType']) ? $this->_data['TaxType'] : null;
     }
 
     /**
@@ -190,7 +190,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getTracking() {
-        return $this->_data['Tracking'];
+        return isset($this->_data['Tracking']) ? $this->_data['Tracking'] : null;
     }
 
     /**
@@ -207,7 +207,7 @@ class JournalLine extends Remote\Object {
      * @return float
      */
     public function getTaxAmount() {
-        return $this->_data['TaxAmount'];
+        return isset($this->_data['TaxAmount']) ? $this->_data['TaxAmount'] : null;
     }
 
 

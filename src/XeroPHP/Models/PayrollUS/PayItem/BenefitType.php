@@ -157,7 +157,7 @@ class BenefitType extends Remote\Object {
      * @return BenefitType
      */
     public function getBenefitType() {
-        return $this->_data['BenefitType'];
+        return isset($this->_data['BenefitType']) ? $this->_data['BenefitType'] : null;
     }
 
     /**
@@ -174,7 +174,7 @@ class BenefitType extends Remote\Object {
      * @return string
      */
     public function getBenefitCategory() {
-        return $this->_data['BenefitCategory'];
+        return isset($this->_data['BenefitCategory']) ? $this->_data['BenefitCategory'] : null;
     }
 
     /**
@@ -191,7 +191,7 @@ class BenefitType extends Remote\Object {
      * @return string
      */
     public function getLiabilityAccountCode() {
-        return $this->_data['LiabilityAccountCode'];
+        return isset($this->_data['LiabilityAccountCode']) ? $this->_data['LiabilityAccountCode'] : null;
     }
 
     /**
@@ -208,7 +208,7 @@ class BenefitType extends Remote\Object {
      * @return string
      */
     public function getExpenseAccountCode() {
-        return $this->_data['ExpenseAccountCode'];
+        return isset($this->_data['ExpenseAccountCode']) ? $this->_data['ExpenseAccountCode'] : null;
     }
 
     /**
@@ -225,7 +225,7 @@ class BenefitType extends Remote\Object {
      * @return string
      */
     public function getBenefitTypeID() {
-        return $this->_data['BenefitTypeID'];
+        return isset($this->_data['BenefitTypeID']) ? $this->_data['BenefitTypeID'] : null;
     }
 
     /**
@@ -242,7 +242,7 @@ class BenefitType extends Remote\Object {
      * @return float
      */
     public function getStandardAmount() {
-        return $this->_data['StandardAmount'];
+        return isset($this->_data['StandardAmount']) ? $this->_data['StandardAmount'] : null;
     }
 
     /**
@@ -259,7 +259,7 @@ class BenefitType extends Remote\Object {
      * @return float
      */
     public function getCompanyMax() {
-        return $this->_data['CompanyMax'];
+        return isset($this->_data['CompanyMax']) ? $this->_data['CompanyMax'] : null;
     }
 
     /**
@@ -276,7 +276,7 @@ class BenefitType extends Remote\Object {
      * @return string
      */
     public function getPercentage() {
-        return $this->_data['Percentage'];
+        return isset($this->_data['Percentage']) ? $this->_data['Percentage'] : null;
     }
 
     /**
@@ -293,7 +293,7 @@ class BenefitType extends Remote\Object {
      * @return float
      */
     public function getShowBalanceOnPaystub() {
-        return $this->_data['ShowBalanceOnPaystub'];
+        return isset($this->_data['ShowBalanceOnPaystub']) ? $this->_data['ShowBalanceOnPaystub'] : null;
     }
 
     /**

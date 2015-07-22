@@ -101,7 +101,7 @@ class Allocation extends Remote\Object {
      * @return Invoice
      */
     public function getInvoice() {
-        return $this->_data['Invoice'];
+        return isset($this->_data['Invoice']) ? $this->_data['Invoice'] : null;
     }
 
     /**
@@ -118,7 +118,7 @@ class Allocation extends Remote\Object {
      * @return float
      */
     public function getAppliedAmount() {
-        return $this->_data['AppliedAmount'];
+        return isset($this->_data['AppliedAmount']) ? $this->_data['AppliedAmount'] : null;
     }
 
     /**
@@ -135,7 +135,7 @@ class Allocation extends Remote\Object {
      * @return \DateTime
      */
     public function getDate() {
-        return $this->_data['Date'];
+        return isset($this->_data['Date']) ? $this->_data['Date'] : null;
     }
 
     /**

@@ -106,7 +106,7 @@ class Account extends Remote\Object {
      * @return string
      */
     public function getAccountID() {
-        return $this->_data['AccountID'];
+        return isset($this->_data['AccountID']) ? $this->_data['AccountID'] : null;
     }
 
     /**
@@ -123,7 +123,7 @@ class Account extends Remote\Object {
      * @return string
      */
     public function getType() {
-        return $this->_data['Type'];
+        return isset($this->_data['Type']) ? $this->_data['Type'] : null;
     }
 
     /**
@@ -140,7 +140,7 @@ class Account extends Remote\Object {
      * @return string
      */
     public function getCode() {
-        return $this->_data['Code'];
+        return isset($this->_data['Code']) ? $this->_data['Code'] : null;
     }
 
     /**
@@ -157,7 +157,7 @@ class Account extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**

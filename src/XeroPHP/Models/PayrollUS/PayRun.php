@@ -164,7 +164,7 @@ class PayRun extends Remote\Object {
      * @return string
      */
     public function getPayScheduleID() {
-        return $this->_data['PayScheduleID'];
+        return isset($this->_data['PayScheduleID']) ? $this->_data['PayScheduleID'] : null;
     }
 
     /**
@@ -181,7 +181,7 @@ class PayRun extends Remote\Object {
      * @return \DateTime
      */
     public function getPayRunPeriodEndDate() {
-        return $this->_data['PayRunPeriodEndDate'];
+        return isset($this->_data['PayRunPeriodEndDate']) ? $this->_data['PayRunPeriodEndDate'] : null;
     }
 
     /**
@@ -198,7 +198,7 @@ class PayRun extends Remote\Object {
      * @return string
      */
     public function getPayRunStatus() {
-        return $this->_data['PayRunStatus'];
+        return isset($this->_data['PayRunStatus']) ? $this->_data['PayRunStatus'] : null;
     }
 
     /**
@@ -215,7 +215,7 @@ class PayRun extends Remote\Object {
      * @return string
      */
     public function getPayRunID() {
-        return $this->_data['PayRunID'];
+        return isset($this->_data['PayRunID']) ? $this->_data['PayRunID'] : null;
     }
 
     /**
@@ -232,7 +232,7 @@ class PayRun extends Remote\Object {
      * @return \DateTime
      */
     public function getPayRunPeriodStartDate() {
-        return $this->_data['PayRunPeriodStartDate'];
+        return isset($this->_data['PayRunPeriodStartDate']) ? $this->_data['PayRunPeriodStartDate'] : null;
     }
 
 
@@ -240,7 +240,7 @@ class PayRun extends Remote\Object {
      * @return \DateTime
      */
     public function getPaymentDate() {
-        return $this->_data['PaymentDate'];
+        return isset($this->_data['PaymentDate']) ? $this->_data['PaymentDate'] : null;
     }
 
 
@@ -248,7 +248,7 @@ class PayRun extends Remote\Object {
      * @return string[]
      */
     public function getEarnings() {
-        return $this->_data['Earnings'];
+        return isset($this->_data['Earnings']) ? $this->_data['Earnings'] : null;
     }
 
 
@@ -256,7 +256,7 @@ class PayRun extends Remote\Object {
      * @return string[]
      */
     public function getDeductions() {
-        return $this->_data['Deductions'];
+        return isset($this->_data['Deductions']) ? $this->_data['Deductions'] : null;
     }
 
 
@@ -264,7 +264,7 @@ class PayRun extends Remote\Object {
      * @return string
      */
     public function getReimbursement() {
-        return $this->_data['Reimbursement'];
+        return isset($this->_data['Reimbursement']) ? $this->_data['Reimbursement'] : null;
     }
 
 
@@ -272,7 +272,7 @@ class PayRun extends Remote\Object {
      * @return string
      */
     public function getNetPay() {
-        return $this->_data['NetPay'];
+        return isset($this->_data['NetPay']) ? $this->_data['NetPay'] : null;
     }
 
 
@@ -280,7 +280,7 @@ class PayRun extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdateDateUTC() {
-        return $this->_data['UpdateDateUTC'];
+        return isset($this->_data['UpdateDateUTC']) ? $this->_data['UpdateDateUTC'] : null;
     }
 
 
@@ -288,7 +288,7 @@ class PayRun extends Remote\Object {
      * @return string[]
      */
     public function getPayStubs() {
-        return $this->_data['PayStubs'];
+        return isset($this->_data['PayStubs']) ? $this->_data['PayStubs'] : null;
     }
 
 

@@ -158,7 +158,7 @@ SECTION125PLAN
      * @return DeductionType
      */
     public function getDeductionType() {
-        return $this->_data['DeductionType'];
+        return isset($this->_data['DeductionType']) ? $this->_data['DeductionType'] : null;
     }
 
     /**
@@ -175,7 +175,7 @@ SECTION125PLAN
      * @return string
      */
     public function getDeductionCategory() {
-        return $this->_data['DeductionCategory'];
+        return isset($this->_data['DeductionCategory']) ? $this->_data['DeductionCategory'] : null;
     }
 
     /**
@@ -192,7 +192,7 @@ SECTION125PLAN
      * @return float
      */
     public function getCalculationType() {
-        return $this->_data['CalculationType'];
+        return isset($this->_data['CalculationType']) ? $this->_data['CalculationType'] : null;
     }
 
     /**
@@ -209,7 +209,7 @@ SECTION125PLAN
      * @return string
      */
     public function getLiabilityAccountCode() {
-        return $this->_data['LiabilityAccountCode'];
+        return isset($this->_data['LiabilityAccountCode']) ? $this->_data['LiabilityAccountCode'] : null;
     }
 
     /**
@@ -226,7 +226,7 @@ SECTION125PLAN
      * @return string
      */
     public function getDeductionTypeID() {
-        return $this->_data['DeductionTypeID'];
+        return isset($this->_data['DeductionTypeID']) ? $this->_data['DeductionTypeID'] : null;
     }
 
     /**
@@ -243,7 +243,7 @@ SECTION125PLAN
      * @return float
      */
     public function getStandardAmount() {
-        return $this->_data['StandardAmount'];
+        return isset($this->_data['StandardAmount']) ? $this->_data['StandardAmount'] : null;
     }
 
     /**
@@ -260,7 +260,7 @@ SECTION125PLAN
      * @return float
      */
     public function getCompanyMax() {
-        return $this->_data['CompanyMax'];
+        return isset($this->_data['CompanyMax']) ? $this->_data['CompanyMax'] : null;
     }
 
     /**

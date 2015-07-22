@@ -108,7 +108,7 @@ class SuperFund extends Remote\Object {
      * @return string
      */
     public function getSuperFundID() {
-        return $this->_data['SuperFundID'];
+        return isset($this->_data['SuperFundID']) ? $this->_data['SuperFundID'] : null;
     }
 
     /**
@@ -125,7 +125,7 @@ class SuperFund extends Remote\Object {
      * @return string
      */
     public function getType() {
-        return $this->_data['Type'];
+        return isset($this->_data['Type']) ? $this->_data['Type'] : null;
     }
 
     /**
@@ -142,7 +142,7 @@ class SuperFund extends Remote\Object {
      * @return string
      */
     public function getABN() {
-        return $this->_data['ABN'];
+        return isset($this->_data['ABN']) ? $this->_data['ABN'] : null;
     }
 
     /**
@@ -159,7 +159,7 @@ class SuperFund extends Remote\Object {
      * @return string
      */
     public function getUSI() {
-        return $this->_data['USI'];
+        return isset($this->_data['USI']) ? $this->_data['USI'] : null;
     }
 
     /**

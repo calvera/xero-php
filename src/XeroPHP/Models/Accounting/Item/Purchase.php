@@ -97,7 +97,7 @@ class Purchase extends Remote\Object {
         return array(
             'UnitPrice' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'AccountCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTime', false, false)
         );
     }
@@ -107,7 +107,7 @@ class Purchase extends Remote\Object {
      * @return string
      */
     public function getUnitPrice() {
-        return $this->_data['UnitPrice'];
+        return isset($this->_data['UnitPrice']) ? $this->_data['UnitPrice'] : null;
     }
 
     /**
@@ -124,7 +124,7 @@ class Purchase extends Remote\Object {
      * @return string
      */
     public function getAccountCode() {
-        return $this->_data['AccountCode'];
+        return isset($this->_data['AccountCode']) ? $this->_data['AccountCode'] : null;
     }
 
     /**
@@ -141,7 +141,7 @@ class Purchase extends Remote\Object {
      * @return string
      */
     public function getTaxType() {
-        return $this->_data['TaxType'];
+        return isset($this->_data['TaxType']) ? $this->_data['TaxType'] : null;
     }
 
     /**
@@ -158,7 +158,7 @@ class Purchase extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
 

@@ -158,7 +158,7 @@ class Journal extends Remote\Object {
      * @return string
      */
     public function getJournalID() {
-        return $this->_data['JournalID'];
+        return isset($this->_data['JournalID']) ? $this->_data['JournalID'] : null;
     }
 
     /**
@@ -175,7 +175,7 @@ class Journal extends Remote\Object {
      * @return \DateTime
      */
     public function getJournalDate() {
-        return $this->_data['JournalDate'];
+        return isset($this->_data['JournalDate']) ? $this->_data['JournalDate'] : null;
     }
 
     /**
@@ -192,7 +192,7 @@ class Journal extends Remote\Object {
      * @return string
      */
     public function getJournalNumber() {
-        return $this->_data['JournalNumber'];
+        return isset($this->_data['JournalNumber']) ? $this->_data['JournalNumber'] : null;
     }
 
     /**
@@ -209,7 +209,7 @@ class Journal extends Remote\Object {
      * @return \DateTime
      */
     public function getCreatedDateUTC() {
-        return $this->_data['CreatedDateUTC'];
+        return isset($this->_data['CreatedDateUTC']) ? $this->_data['CreatedDateUTC'] : null;
     }
 
     /**
@@ -226,7 +226,7 @@ class Journal extends Remote\Object {
      * @return string
      */
     public function getReference() {
-        return $this->_data['Reference'];
+        return isset($this->_data['Reference']) ? $this->_data['Reference'] : null;
     }
 
     /**
@@ -243,7 +243,7 @@ class Journal extends Remote\Object {
      * @return string
      */
     public function getSourceID() {
-        return $this->_data['SourceID'];
+        return isset($this->_data['SourceID']) ? $this->_data['SourceID'] : null;
     }
 
     /**
@@ -260,7 +260,7 @@ class Journal extends Remote\Object {
      * @return string
      */
     public function getSourceType() {
-        return $this->_data['SourceType'];
+        return isset($this->_data['SourceType']) ? $this->_data['SourceType'] : null;
     }
 
     /**
@@ -277,7 +277,7 @@ class Journal extends Remote\Object {
      * @return JournalLine[]
      */
     public function getJournalLines() {
-        return $this->_data['JournalLines'];
+        return isset($this->_data['JournalLines']) ? $this->_data['JournalLines'] : null;
     }
 
     /**

@@ -170,7 +170,7 @@ class OpeningBalance extends Remote\Object {
      * @return EarningsLine[]
      */
     public function getEarningsLines() {
-        return $this->_data['EarningsLines'];
+        return isset($this->_data['EarningsLines']) ? $this->_data['EarningsLines'] : null;
     }
 
     /**
@@ -187,7 +187,7 @@ class OpeningBalance extends Remote\Object {
      * @return BenefitLine[]
      */
     public function getBenefitLines() {
-        return $this->_data['BenefitLines'];
+        return isset($this->_data['BenefitLines']) ? $this->_data['BenefitLines'] : null;
     }
 
     /**
@@ -204,7 +204,7 @@ class OpeningBalance extends Remote\Object {
      * @return DeductionLine[]
      */
     public function getDeductionLines() {
-        return $this->_data['DeductionLines'];
+        return isset($this->_data['DeductionLines']) ? $this->_data['DeductionLines'] : null;
     }
 
     /**
@@ -221,7 +221,7 @@ class OpeningBalance extends Remote\Object {
      * @return ReimbursementLine[]
      */
     public function getReimbursementLines() {
-        return $this->_data['ReimbursementLines'];
+        return isset($this->_data['ReimbursementLines']) ? $this->_data['ReimbursementLines'] : null;
     }
 
     /**
@@ -238,7 +238,7 @@ class OpeningBalance extends Remote\Object {
      * @return string
      */
     public function getEarningsTypeID() {
-        return $this->_data['EarningsTypeID'];
+        return isset($this->_data['EarningsTypeID']) ? $this->_data['EarningsTypeID'] : null;
     }
 
     /**
@@ -255,7 +255,7 @@ class OpeningBalance extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**
@@ -272,7 +272,7 @@ class OpeningBalance extends Remote\Object {
      * @return string
      */
     public function getBenefitTypeID() {
-        return $this->_data['BenefitTypeID'];
+        return isset($this->_data['BenefitTypeID']) ? $this->_data['BenefitTypeID'] : null;
     }
 
     /**
@@ -289,7 +289,7 @@ class OpeningBalance extends Remote\Object {
      * @return string
      */
     public function getDeductionTypeID() {
-        return $this->_data['DeductionTypeID'];
+        return isset($this->_data['DeductionTypeID']) ? $this->_data['DeductionTypeID'] : null;
     }
 
     /**
@@ -306,7 +306,7 @@ class OpeningBalance extends Remote\Object {
      * @return string
      */
     public function getReimbursementTypeID() {
-        return $this->_data['ReimbursementTypeID'];
+        return isset($this->_data['ReimbursementTypeID']) ? $this->_data['ReimbursementTypeID'] : null;
     }
 
     /**
@@ -323,7 +323,7 @@ class OpeningBalance extends Remote\Object {
      * @return string
      */
     public function getRecordfilter() {
-        return $this->_data['Recordfilter'];
+        return isset($this->_data['Recordfilter']) ? $this->_data['Recordfilter'] : null;
     }
 
     /**
@@ -340,7 +340,7 @@ class OpeningBalance extends Remote\Object {
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -357,7 +357,7 @@ class OpeningBalance extends Remote\Object {
      * @return \DateTime
      */
     public function getModifiedAfter() {
-        return $this->_data['ModifiedAfter'];
+        return isset($this->_data['ModifiedAfter']) ? $this->_data['ModifiedAfter'] : null;
     }
 
     /**

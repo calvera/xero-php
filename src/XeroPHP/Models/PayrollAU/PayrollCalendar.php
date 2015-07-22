@@ -123,7 +123,7 @@ class PayrollCalendar extends Remote\Object {
      * @return string
      */
     public function getPayrollCalendarID() {
-        return $this->_data['PayrollCalendarID'];
+        return isset($this->_data['PayrollCalendarID']) ? $this->_data['PayrollCalendarID'] : null;
     }
 
     /**
@@ -140,7 +140,7 @@ class PayrollCalendar extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -157,7 +157,7 @@ class PayrollCalendar extends Remote\Object {
      * @return string
      */
     public function getCalendarType() {
-        return $this->_data['CalendarType'];
+        return isset($this->_data['CalendarType']) ? $this->_data['CalendarType'] : null;
     }
 
     /**
@@ -174,7 +174,7 @@ class PayrollCalendar extends Remote\Object {
      * @return \DateTime
      */
     public function getStartDate() {
-        return $this->_data['StartDate'];
+        return isset($this->_data['StartDate']) ? $this->_data['StartDate'] : null;
     }
 
     /**
@@ -191,7 +191,7 @@ class PayrollCalendar extends Remote\Object {
      * @return \DateTime
      */
     public function getPaymentDate() {
-        return $this->_data['PaymentDate'];
+        return isset($this->_data['PaymentDate']) ? $this->_data['PaymentDate'] : null;
     }
 
     /**

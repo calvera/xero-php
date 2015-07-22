@@ -99,7 +99,7 @@ class TrackingOption extends Remote\Object {
      * @return string
      */
     public function getTrackingOptionID() {
-        return $this->_data['TrackingOptionID'];
+        return isset($this->_data['TrackingOptionID']) ? $this->_data['TrackingOptionID'] : null;
     }
 
     /**
@@ -116,7 +116,7 @@ class TrackingOption extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -133,7 +133,7 @@ class TrackingOption extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**

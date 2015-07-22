@@ -92,7 +92,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getWorkLocationID() {
-        return $this->_data['WorkLocationID'];
+        return isset($this->_data['WorkLocationID']) ? $this->_data['WorkLocationID'] : null;
     }
 
     /**
@@ -109,7 +109,7 @@ class WorkLocation extends Remote\Object {
      * @return bool
      */
     public function getIsPrimary() {
-        return $this->_data['IsPrimary'];
+        return isset($this->_data['IsPrimary']) ? $this->_data['IsPrimary'] : null;
     }
 
     /**

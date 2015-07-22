@@ -98,7 +98,7 @@ class ExternalLink extends Remote\Object {
      * @return string
      */
     public function getLinkType() {
-        return $this->_data['LinkType'];
+        return isset($this->_data['LinkType']) ? $this->_data['LinkType'] : null;
     }
 
     /**
@@ -115,7 +115,7 @@ class ExternalLink extends Remote\Object {
      * @return string
      */
     public function getURL() {
-        return $this->_data['URL'];
+        return isset($this->_data['URL']) ? $this->_data['URL'] : null;
     }
 
     /**

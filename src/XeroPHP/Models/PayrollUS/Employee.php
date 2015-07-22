@@ -284,7 +284,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getFirstName() {
-        return $this->_data['FirstName'];
+        return isset($this->_data['FirstName']) ? $this->_data['FirstName'] : null;
     }
 
     /**
@@ -301,7 +301,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getLastName() {
-        return $this->_data['LastName'];
+        return isset($this->_data['LastName']) ? $this->_data['LastName'] : null;
     }
 
     /**
@@ -318,7 +318,7 @@ class Employee extends Remote\Object {
      * @return \DateTime
      */
     public function getDateOfBirth() {
-        return $this->_data['DateOfBirth'];
+        return isset($this->_data['DateOfBirth']) ? $this->_data['DateOfBirth'] : null;
     }
 
     /**
@@ -335,7 +335,7 @@ class Employee extends Remote\Object {
      * @return HomeAddress
      */
     public function getHomeAddress() {
-        return $this->_data['HomeAddress'];
+        return isset($this->_data['HomeAddress']) ? $this->_data['HomeAddress'] : null;
     }
 
     /**
@@ -352,7 +352,7 @@ class Employee extends Remote\Object {
      * @return string[]
      */
     public function getMiddleNames() {
-        return $this->_data['MiddleNames'];
+        return isset($this->_data['MiddleNames']) ? $this->_data['MiddleNames'] : null;
     }
 
     /**
@@ -369,7 +369,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getJobTitle() {
-        return $this->_data['JobTitle'];
+        return isset($this->_data['JobTitle']) ? $this->_data['JobTitle'] : null;
     }
 
     /**
@@ -386,7 +386,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getEmail() {
-        return $this->_data['Email'];
+        return isset($this->_data['Email']) ? $this->_data['Email'] : null;
     }
 
     /**
@@ -403,7 +403,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getGender() {
-        return $this->_data['Gender'];
+        return isset($this->_data['Gender']) ? $this->_data['Gender'] : null;
     }
 
     /**
@@ -420,7 +420,7 @@ class Employee extends Remote\Object {
      * @return MailingAddress
      */
     public function getMailingAddress() {
-        return $this->_data['MailingAddress'];
+        return isset($this->_data['MailingAddress']) ? $this->_data['MailingAddress'] : null;
     }
 
     /**
@@ -437,7 +437,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getPhone() {
-        return $this->_data['Phone'];
+        return isset($this->_data['Phone']) ? $this->_data['Phone'] : null;
     }
 
     /**
@@ -454,7 +454,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getEmployeeNumber() {
-        return $this->_data['EmployeeNumber'];
+        return isset($this->_data['EmployeeNumber']) ? $this->_data['EmployeeNumber'] : null;
     }
 
     /**
@@ -471,7 +471,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getSocialSecurityNumber() {
-        return $this->_data['SocialSecurityNumber'];
+        return isset($this->_data['SocialSecurityNumber']) ? $this->_data['SocialSecurityNumber'] : null;
     }
 
     /**
@@ -488,7 +488,7 @@ class Employee extends Remote\Object {
      * @return \DateTime
      */
     public function getStartDate() {
-        return $this->_data['StartDate'];
+        return isset($this->_data['StartDate']) ? $this->_data['StartDate'] : null;
     }
 
     /**
@@ -505,7 +505,7 @@ class Employee extends Remote\Object {
      * @return \DateTime
      */
     public function getTerminationDate() {
-        return $this->_data['TerminationDate'];
+        return isset($this->_data['TerminationDate']) ? $this->_data['TerminationDate'] : null;
     }
 
     /**
@@ -522,7 +522,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getPayScheduleID() {
-        return $this->_data['PayScheduleID'];
+        return isset($this->_data['PayScheduleID']) ? $this->_data['PayScheduleID'] : null;
     }
 
     /**
@@ -539,7 +539,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getEmployeeGroupName() {
-        return $this->_data['EmployeeGroupName'];
+        return isset($this->_data['EmployeeGroupName']) ? $this->_data['EmployeeGroupName'] : null;
     }
 
     /**
@@ -556,7 +556,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getEmploymentBasis() {
-        return $this->_data['EmploymentBasis'];
+        return isset($this->_data['EmploymentBasis']) ? $this->_data['EmploymentBasis'] : null;
     }
 
     /**
@@ -573,7 +573,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getHolidayGroupID() {
-        return $this->_data['HolidayGroupID'];
+        return isset($this->_data['HolidayGroupID']) ? $this->_data['HolidayGroupID'] : null;
     }
 
     /**
@@ -590,7 +590,7 @@ class Employee extends Remote\Object {
      * @return bool
      */
     public function getIsAuthorisedToApproveTimeOff() {
-        return $this->_data['IsAuthorisedToApproveTimeOff'];
+        return isset($this->_data['IsAuthorisedToApproveTimeOff']) ? $this->_data['IsAuthorisedToApproveTimeOff'] : null;
     }
 
     /**
@@ -607,7 +607,7 @@ class Employee extends Remote\Object {
      * @return bool
      */
     public function getIsAuthorisedToApproveTimesheets() {
-        return $this->_data['IsAuthorisedToApproveTimesheets'];
+        return isset($this->_data['IsAuthorisedToApproveTimesheets']) ? $this->_data['IsAuthorisedToApproveTimesheets'] : null;
     }
 
     /**
@@ -624,7 +624,7 @@ class Employee extends Remote\Object {
      * @return SalaryAndWage[]
      */
     public function getSalaryAndWages() {
-        return $this->_data['SalaryAndWages'];
+        return isset($this->_data['SalaryAndWages']) ? $this->_data['SalaryAndWages'] : null;
     }
 
     /**
@@ -641,7 +641,7 @@ class Employee extends Remote\Object {
      * @return WorkLocation[]
      */
     public function getWorkLocations() {
-        return $this->_data['WorkLocations'];
+        return isset($this->_data['WorkLocations']) ? $this->_data['WorkLocations'] : null;
     }
 
     /**
@@ -658,7 +658,7 @@ class Employee extends Remote\Object {
      * @return PaymentMethod
      */
     public function getPaymentMethod() {
-        return $this->_data['PaymentMethod'];
+        return isset($this->_data['PaymentMethod']) ? $this->_data['PaymentMethod'] : null;
     }
 
     /**
@@ -675,7 +675,7 @@ class Employee extends Remote\Object {
      * @return PayTemplate
      */
     public function getPayTemplate() {
-        return $this->_data['PayTemplate'];
+        return isset($this->_data['PayTemplate']) ? $this->_data['PayTemplate'] : null;
     }
 
     /**
@@ -692,7 +692,7 @@ class Employee extends Remote\Object {
      * @return OpeningBalance[]
      */
     public function getOpeningBalances() {
-        return $this->_data['OpeningBalances'];
+        return isset($this->_data['OpeningBalances']) ? $this->_data['OpeningBalances'] : null;
     }
 
     /**
@@ -709,7 +709,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -726,7 +726,7 @@ class Employee extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -743,7 +743,7 @@ class Employee extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
     /**

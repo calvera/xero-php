@@ -118,7 +118,7 @@ class Item extends Remote\Object {
      * @return string
      */
     public function getItemID() {
-        return $this->_data['ItemID'];
+        return isset($this->_data['ItemID']) ? $this->_data['ItemID'] : null;
     }
 
     /**
@@ -135,7 +135,7 @@ class Item extends Remote\Object {
      * @return string
      */
     public function getCode() {
-        return $this->_data['Code'];
+        return isset($this->_data['Code']) ? $this->_data['Code'] : null;
     }
 
     /**
@@ -152,7 +152,7 @@ class Item extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -169,7 +169,7 @@ class Item extends Remote\Object {
      * @return Purchase[]
      */
     public function getPurchaseDetails() {
-        return $this->_data['PurchaseDetails'];
+        return isset($this->_data['PurchaseDetails']) ? $this->_data['PurchaseDetails'] : null;
     }
 
     /**
@@ -186,7 +186,7 @@ class Item extends Remote\Object {
      * @return Sale[]
      */
     public function getSalesDetails() {
-        return $this->_data['SalesDetails'];
+        return isset($this->_data['SalesDetails']) ? $this->_data['SalesDetails'] : null;
     }
 
     /**

@@ -92,7 +92,7 @@ class Sale extends Remote\Object {
      * @return string
      */
     public function getDay() {
-        return $this->_data['Day'];
+        return isset($this->_data['Day']) ? $this->_data['Day'] : null;
     }
 
     /**
@@ -109,7 +109,7 @@ class Sale extends Remote\Object {
      * @return string
      */
     public function getType() {
-        return $this->_data['Type'];
+        return isset($this->_data['Type']) ? $this->_data['Type'] : null;
     }
 
     /**

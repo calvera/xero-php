@@ -125,7 +125,7 @@ If Paid Time Off is selected the employee will get paid when taking this time of
      * @return TimeOffType
      */
     public function getTimeOffType() {
-        return $this->_data['TimeOffType'];
+        return isset($this->_data['TimeOffType']) ? $this->_data['TimeOffType'] : null;
     }
 
     /**
@@ -142,7 +142,7 @@ If Paid Time Off is selected the employee will get paid when taking this time of
      * @return string
      */
     public function getTimeOffCategory() {
-        return $this->_data['TimeOffCategory'];
+        return isset($this->_data['TimeOffCategory']) ? $this->_data['TimeOffCategory'] : null;
     }
 
     /**
@@ -159,7 +159,7 @@ If Paid Time Off is selected the employee will get paid when taking this time of
      * @return string
      */
     public function getExpenseAccountCode() {
-        return $this->_data['ExpenseAccountCode'];
+        return isset($this->_data['ExpenseAccountCode']) ? $this->_data['ExpenseAccountCode'] : null;
     }
 
     /**
@@ -176,7 +176,7 @@ If Paid Time Off is selected the employee will get paid when taking this time of
      * @return string
      */
     public function getLiabilityAccountCode() {
-        return $this->_data['LiabilityAccountCode'];
+        return isset($this->_data['LiabilityAccountCode']) ? $this->_data['LiabilityAccountCode'] : null;
     }
 
     /**
@@ -193,7 +193,7 @@ If Paid Time Off is selected the employee will get paid when taking this time of
      * @return string
      */
     public function getTimeOffTypeID() {
-        return $this->_data['TimeOffTypeID'];
+        return isset($this->_data['TimeOffTypeID']) ? $this->_data['TimeOffTypeID'] : null;
     }
 
     /**
@@ -210,7 +210,7 @@ If Paid Time Off is selected the employee will get paid when taking this time of
      * @return string
      */
     public function getShowBalanceToEmployee() {
-        return $this->_data['ShowBalanceToEmployee'];
+        return isset($this->_data['ShowBalanceToEmployee']) ? $this->_data['ShowBalanceToEmployee'] : null;
     }
 
     /**

@@ -99,7 +99,7 @@ class TimeOffLine extends Remote\Object {
      * @return string
      */
     public function getTimeOffTypeID() {
-        return $this->_data['TimeOffTypeID'];
+        return isset($this->_data['TimeOffTypeID']) ? $this->_data['TimeOffTypeID'] : null;
     }
 
     /**
@@ -116,7 +116,7 @@ class TimeOffLine extends Remote\Object {
      * @return string[]
      */
     public function getHours() {
-        return $this->_data['Hours'];
+        return isset($this->_data['Hours']) ? $this->_data['Hours'] : null;
     }
 
     /**
@@ -133,7 +133,7 @@ class TimeOffLine extends Remote\Object {
      * @return string
      */
     public function getBalance() {
-        return $this->_data['Balance'];
+        return isset($this->_data['Balance']) ? $this->_data['Balance'] : null;
     }
 
     /**

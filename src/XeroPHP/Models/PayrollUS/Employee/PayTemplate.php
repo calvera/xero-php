@@ -193,7 +193,7 @@ class PayTemplate extends Remote\Object {
      * @return float[]
      */
     public function getEarningsLines() {
-        return $this->_data['EarningsLines'];
+        return isset($this->_data['EarningsLines']) ? $this->_data['EarningsLines'] : null;
     }
 
     /**
@@ -210,7 +210,7 @@ class PayTemplate extends Remote\Object {
      * @return DeductionLine[]
      */
     public function getDeductionLines() {
-        return $this->_data['DeductionLines'];
+        return isset($this->_data['DeductionLines']) ? $this->_data['DeductionLines'] : null;
     }
 
     /**
@@ -227,7 +227,7 @@ class PayTemplate extends Remote\Object {
      * @return ReimbursementLine[]
      */
     public function getReimbursementLines() {
-        return $this->_data['ReimbursementLines'];
+        return isset($this->_data['ReimbursementLines']) ? $this->_data['ReimbursementLines'] : null;
     }
 
     /**
@@ -244,7 +244,7 @@ class PayTemplate extends Remote\Object {
      * @return BenefitLine[]
      */
     public function getBenefitLines() {
-        return $this->_data['BenefitLines'];
+        return isset($this->_data['BenefitLines']) ? $this->_data['BenefitLines'] : null;
     }
 
     /**
@@ -261,7 +261,7 @@ class PayTemplate extends Remote\Object {
      * @return string
      */
     public function getEarningsTypeID() {
-        return $this->_data['EarningsTypeID'];
+        return isset($this->_data['EarningsTypeID']) ? $this->_data['EarningsTypeID'] : null;
     }
 
     /**
@@ -278,7 +278,7 @@ class PayTemplate extends Remote\Object {
      * @return string[]
      */
     public function getUnitsOrHours() {
-        return $this->_data['UnitsOrHours'];
+        return isset($this->_data['UnitsOrHours']) ? $this->_data['UnitsOrHours'] : null;
     }
 
     /**
@@ -295,7 +295,7 @@ class PayTemplate extends Remote\Object {
      * @return float
      */
     public function getRatePerUnit() {
-        return $this->_data['RatePerUnit'];
+        return isset($this->_data['RatePerUnit']) ? $this->_data['RatePerUnit'] : null;
     }
 
     /**
@@ -312,7 +312,7 @@ class PayTemplate extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**
@@ -329,7 +329,7 @@ class PayTemplate extends Remote\Object {
      * @return string
      */
     public function getDeductionTypeID() {
-        return $this->_data['DeductionTypeID'];
+        return isset($this->_data['DeductionTypeID']) ? $this->_data['DeductionTypeID'] : null;
     }
 
     /**
@@ -346,7 +346,7 @@ class PayTemplate extends Remote\Object {
      * @return string
      */
     public function getCalculationType() {
-        return $this->_data['CalculationType'];
+        return isset($this->_data['CalculationType']) ? $this->_data['CalculationType'] : null;
     }
 
     /**
@@ -363,7 +363,7 @@ class PayTemplate extends Remote\Object {
      * @return float
      */
     public function getEmployeeMax() {
-        return $this->_data['EmployeeMax'];
+        return isset($this->_data['EmployeeMax']) ? $this->_data['EmployeeMax'] : null;
     }
 
     /**
@@ -380,7 +380,7 @@ class PayTemplate extends Remote\Object {
      * @return string
      */
     public function getPercentage() {
-        return $this->_data['Percentage'];
+        return isset($this->_data['Percentage']) ? $this->_data['Percentage'] : null;
     }
 
     /**
@@ -397,7 +397,7 @@ class PayTemplate extends Remote\Object {
      * @return string
      */
     public function getReimbursementTypeID() {
-        return $this->_data['ReimbursementTypeID'];
+        return isset($this->_data['ReimbursementTypeID']) ? $this->_data['ReimbursementTypeID'] : null;
     }
 
     /**
@@ -414,7 +414,7 @@ class PayTemplate extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -431,7 +431,7 @@ class PayTemplate extends Remote\Object {
      * @return string
      */
     public function getBenefitTypeID() {
-        return $this->_data['BenefitTypeID'];
+        return isset($this->_data['BenefitTypeID']) ? $this->_data['BenefitTypeID'] : null;
     }
 
     /**

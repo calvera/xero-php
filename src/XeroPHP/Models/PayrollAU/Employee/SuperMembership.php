@@ -124,7 +124,7 @@ class SuperMembership extends Remote\Object {
      * @return string
      */
     public function getSuperFundID() {
-        return $this->_data['SuperFundID'];
+        return isset($this->_data['SuperFundID']) ? $this->_data['SuperFundID'] : null;
     }
 
     /**
@@ -141,7 +141,7 @@ class SuperMembership extends Remote\Object {
      * @return string
      */
     public function getEmployeeNumber() {
-        return $this->_data['EmployeeNumber'];
+        return isset($this->_data['EmployeeNumber']) ? $this->_data['EmployeeNumber'] : null;
     }
 
     /**
@@ -158,7 +158,7 @@ class SuperMembership extends Remote\Object {
      * @return string
      */
     public function getSuperMembershipID() {
-        return $this->_data['SuperMembershipID'];
+        return isset($this->_data['SuperMembershipID']) ? $this->_data['SuperMembershipID'] : null;
     }
 
     /**
@@ -175,7 +175,7 @@ class SuperMembership extends Remote\Object {
      * @return string
      */
     public function getRecordfilter() {
-        return $this->_data['Recordfilter'];
+        return isset($this->_data['Recordfilter']) ? $this->_data['Recordfilter'] : null;
     }
 
     /**
@@ -192,7 +192,7 @@ class SuperMembership extends Remote\Object {
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -209,7 +209,7 @@ class SuperMembership extends Remote\Object {
      * @return \DateTime
      */
     public function getModifiedAfter() {
-        return $this->_data['ModifiedAfter'];
+        return isset($this->_data['ModifiedAfter']) ? $this->_data['ModifiedAfter'] : null;
     }
 
     /**

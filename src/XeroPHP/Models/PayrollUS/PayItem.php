@@ -120,7 +120,7 @@ class PayItem extends Remote\Object {
      * @return EarningsType[]
      */
     public function getEarningsTypes() {
-        return $this->_data['EarningsTypes'];
+        return isset($this->_data['EarningsTypes']) ? $this->_data['EarningsTypes'] : null;
     }
 
     /**
@@ -137,7 +137,7 @@ class PayItem extends Remote\Object {
      * @return BenefitType[]
      */
     public function getBenefitTypes() {
-        return $this->_data['BenefitTypes'];
+        return isset($this->_data['BenefitTypes']) ? $this->_data['BenefitTypes'] : null;
     }
 
     /**
@@ -154,7 +154,7 @@ class PayItem extends Remote\Object {
      * @return DeductionType[]
      */
     public function getDeductionTypes() {
-        return $this->_data['DeductionTypes'];
+        return isset($this->_data['DeductionTypes']) ? $this->_data['DeductionTypes'] : null;
     }
 
     /**
@@ -171,7 +171,7 @@ class PayItem extends Remote\Object {
      * @return ReimbursementType[]
      */
     public function getReimbursementTypes() {
-        return $this->_data['ReimbursementTypes'];
+        return isset($this->_data['ReimbursementTypes']) ? $this->_data['ReimbursementTypes'] : null;
     }
 
     /**
@@ -188,7 +188,7 @@ class PayItem extends Remote\Object {
      * @return TimeOffType[]
      */
     public function getTimeOffTypes() {
-        return $this->_data['TimeOffTypes'];
+        return isset($this->_data['TimeOffTypes']) ? $this->_data['TimeOffTypes'] : null;
     }
 
     /**

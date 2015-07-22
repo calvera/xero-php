@@ -99,7 +99,7 @@ class LeaveAccrualLine extends Remote\Object {
      * @return string
      */
     public function getLeaveTypeID() {
-        return $this->_data['LeaveTypeID'];
+        return isset($this->_data['LeaveTypeID']) ? $this->_data['LeaveTypeID'] : null;
     }
 
     /**
@@ -116,7 +116,7 @@ class LeaveAccrualLine extends Remote\Object {
      * @return string[]
      */
     public function getNumberOfUnits() {
-        return $this->_data['NumberOfUnits'];
+        return isset($this->_data['NumberOfUnits']) ? $this->_data['NumberOfUnits'] : null;
     }
 
     /**
@@ -133,7 +133,7 @@ class LeaveAccrualLine extends Remote\Object {
      * @return string
      */
     public function getAutoCalculate() {
-        return $this->_data['AutoCalculate'];
+        return isset($this->_data['AutoCalculate']) ? $this->_data['AutoCalculate'] : null;
     }
 
     /**

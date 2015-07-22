@@ -95,7 +95,7 @@ class Setting extends Remote\Object {
      * @return Account[]
      */
     public function getAccounts() {
-        return $this->_data['Accounts'];
+        return isset($this->_data['Accounts']) ? $this->_data['Accounts'] : null;
     }
 
     /**
@@ -112,7 +112,7 @@ class Setting extends Remote\Object {
      * @return TrackingCategory[]
      */
     public function getTrackingCategories() {
-        return $this->_data['TrackingCategories'];
+        return isset($this->_data['TrackingCategories']) ? $this->_data['TrackingCategories'] : null;
     }
 
     /**

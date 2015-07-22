@@ -133,7 +133,7 @@ class Folder extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -150,7 +150,7 @@ class Folder extends Remote\Object {
      * @return string
      */
     public function getFileCount() {
-        return $this->_data['FileCount'];
+        return isset($this->_data['FileCount']) ? $this->_data['FileCount'] : null;
     }
 
     /**
@@ -167,7 +167,7 @@ class Folder extends Remote\Object {
      * @return string
      */
     public function getEmail() {
-        return $this->_data['Email'];
+        return isset($this->_data['Email']) ? $this->_data['Email'] : null;
     }
 
     /**
@@ -184,7 +184,7 @@ class Folder extends Remote\Object {
      * @return bool
      */
     public function getIsInbox() {
-        return $this->_data['IsInbox'];
+        return isset($this->_data['IsInbox']) ? $this->_data['IsInbox'] : null;
     }
 
     /**
@@ -201,7 +201,7 @@ class Folder extends Remote\Object {
      * @return string
      */
     public function getId() {
-        return $this->_data['Id'];
+        return isset($this->_data['Id']) ? $this->_data['Id'] : null;
     }
 
     /**
@@ -218,7 +218,7 @@ class Folder extends Remote\Object {
      * @return File[]
      */
     public function getFiles() {
-        return $this->_data['Files'];
+        return isset($this->_data['Files']) ? $this->_data['Files'] : null;
     }
 
     /**
@@ -235,7 +235,7 @@ class Folder extends Remote\Object {
      * @return string
      */
     public function getFolderId() {
-        return $this->_data['FolderId'];
+        return isset($this->_data['FolderId']) ? $this->_data['FolderId'] : null;
     }
 
     /**

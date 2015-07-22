@@ -106,7 +106,7 @@ class EarningsLine extends Remote\Object {
      * @return string
      */
     public function getEarningsRateID() {
-        return $this->_data['EarningsRateID'];
+        return isset($this->_data['EarningsRateID']) ? $this->_data['EarningsRateID'] : null;
     }
 
     /**
@@ -123,7 +123,7 @@ class EarningsLine extends Remote\Object {
      * @return float
      */
     public function getRatePerUnit() {
-        return $this->_data['RatePerUnit'];
+        return isset($this->_data['RatePerUnit']) ? $this->_data['RatePerUnit'] : null;
     }
 
     /**
@@ -140,7 +140,7 @@ class EarningsLine extends Remote\Object {
      * @return float[]
      */
     public function getNumberOfUnits() {
-        return $this->_data['NumberOfUnits'];
+        return isset($this->_data['NumberOfUnits']) ? $this->_data['NumberOfUnits'] : null;
     }
 
     /**
@@ -157,7 +157,7 @@ class EarningsLine extends Remote\Object {
      * @return float
      */
     public function getFixedAmount() {
-        return $this->_data['FixedAmount'];
+        return isset($this->_data['FixedAmount']) ? $this->_data['FixedAmount'] : null;
     }
 
     /**

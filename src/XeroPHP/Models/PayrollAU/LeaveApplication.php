@@ -140,7 +140,7 @@ class LeaveApplication extends Remote\Object {
      * @return string
      */
     public function getLeaveApplicationID() {
-        return $this->_data['LeaveApplicationID'];
+        return isset($this->_data['LeaveApplicationID']) ? $this->_data['LeaveApplicationID'] : null;
     }
 
     /**
@@ -157,7 +157,7 @@ class LeaveApplication extends Remote\Object {
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -174,7 +174,7 @@ class LeaveApplication extends Remote\Object {
      * @return string
      */
     public function getLeaveTypeID() {
-        return $this->_data['LeaveTypeID'];
+        return isset($this->_data['LeaveTypeID']) ? $this->_data['LeaveTypeID'] : null;
     }
 
     /**
@@ -191,7 +191,7 @@ class LeaveApplication extends Remote\Object {
      * @return string
      */
     public function getTitle() {
-        return $this->_data['Title'];
+        return isset($this->_data['Title']) ? $this->_data['Title'] : null;
     }
 
     /**
@@ -208,7 +208,7 @@ class LeaveApplication extends Remote\Object {
      * @return \DateTime
      */
     public function getStartDate() {
-        return $this->_data['StartDate'];
+        return isset($this->_data['StartDate']) ? $this->_data['StartDate'] : null;
     }
 
     /**
@@ -225,7 +225,7 @@ class LeaveApplication extends Remote\Object {
      * @return \DateTime
      */
     public function getEndDate() {
-        return $this->_data['EndDate'];
+        return isset($this->_data['EndDate']) ? $this->_data['EndDate'] : null;
     }
 
     /**
@@ -242,7 +242,7 @@ class LeaveApplication extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -259,7 +259,7 @@ class LeaveApplication extends Remote\Object {
      * @return LeavePeriod[]
      */
     public function getLeavePeriods() {
-        return $this->_data['LeavePeriods'];
+        return isset($this->_data['LeavePeriods']) ? $this->_data['LeavePeriods'] : null;
     }
 
     /**

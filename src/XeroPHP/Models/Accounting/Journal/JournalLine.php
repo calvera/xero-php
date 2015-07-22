@@ -153,7 +153,7 @@ class JournalLine extends Remote\Object {
             'NetAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'GrossAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'TaxAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'TaxName' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TaxRate', false, false),
             'TrackingCategories' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TrackingCategory', true, false)
         );
@@ -164,7 +164,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getJournalLineID() {
-        return $this->_data['JournalLineID'];
+        return isset($this->_data['JournalLineID']) ? $this->_data['JournalLineID'] : null;
     }
 
     /**
@@ -181,7 +181,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getAccountID() {
-        return $this->_data['AccountID'];
+        return isset($this->_data['AccountID']) ? $this->_data['AccountID'] : null;
     }
 
     /**
@@ -198,7 +198,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getAccountCode() {
-        return $this->_data['AccountCode'];
+        return isset($this->_data['AccountCode']) ? $this->_data['AccountCode'] : null;
     }
 
     /**
@@ -215,7 +215,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getAccountType() {
-        return $this->_data['AccountType'];
+        return isset($this->_data['AccountType']) ? $this->_data['AccountType'] : null;
     }
 
     /**
@@ -232,7 +232,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getAccountName() {
-        return $this->_data['AccountName'];
+        return isset($this->_data['AccountName']) ? $this->_data['AccountName'] : null;
     }
 
     /**
@@ -249,7 +249,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**
@@ -266,7 +266,7 @@ class JournalLine extends Remote\Object {
      * @return float
      */
     public function getNetAmount() {
-        return $this->_data['NetAmount'];
+        return isset($this->_data['NetAmount']) ? $this->_data['NetAmount'] : null;
     }
 
     /**
@@ -283,7 +283,7 @@ class JournalLine extends Remote\Object {
      * @return float
      */
     public function getGrossAmount() {
-        return $this->_data['GrossAmount'];
+        return isset($this->_data['GrossAmount']) ? $this->_data['GrossAmount'] : null;
     }
 
     /**
@@ -300,7 +300,7 @@ class JournalLine extends Remote\Object {
      * @return float
      */
     public function getTaxAmount() {
-        return $this->_data['TaxAmount'];
+        return isset($this->_data['TaxAmount']) ? $this->_data['TaxAmount'] : null;
     }
 
     /**
@@ -317,7 +317,7 @@ class JournalLine extends Remote\Object {
      * @return string
      */
     public function getTaxType() {
-        return $this->_data['TaxType'];
+        return isset($this->_data['TaxType']) ? $this->_data['TaxType'] : null;
     }
 
     /**
@@ -334,7 +334,7 @@ class JournalLine extends Remote\Object {
      * @return TaxRate
      */
     public function getTaxName() {
-        return $this->_data['TaxName'];
+        return isset($this->_data['TaxName']) ? $this->_data['TaxName'] : null;
     }
 
     /**
@@ -351,7 +351,7 @@ class JournalLine extends Remote\Object {
      * @return TrackingCategory[]
      */
     public function getTrackingCategories() {
-        return $this->_data['TrackingCategories'];
+        return isset($this->_data['TrackingCategories']) ? $this->_data['TrackingCategories'] : null;
     }
 
     /**

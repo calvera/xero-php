@@ -127,7 +127,7 @@ class SalaryAndWage extends Remote\Object {
      * @return string
      */
     public function getSalaryAndWageID() {
-        return $this->_data['SalaryAndWageID'];
+        return isset($this->_data['SalaryAndWageID']) ? $this->_data['SalaryAndWageID'] : null;
     }
 
     /**
@@ -144,7 +144,7 @@ class SalaryAndWage extends Remote\Object {
      * @return string
      */
     public function getEarningsTypeID() {
-        return $this->_data['EarningsTypeID'];
+        return isset($this->_data['EarningsTypeID']) ? $this->_data['EarningsTypeID'] : null;
     }
 
     /**
@@ -161,7 +161,7 @@ class SalaryAndWage extends Remote\Object {
      * @return string
      */
     public function getSalaryWagesType() {
-        return $this->_data['SalaryWagesType'];
+        return isset($this->_data['SalaryWagesType']) ? $this->_data['SalaryWagesType'] : null;
     }
 
     /**
@@ -178,7 +178,7 @@ class SalaryAndWage extends Remote\Object {
      * @return float
      */
     public function getHourlyRate() {
-        return $this->_data['HourlyRate'];
+        return isset($this->_data['HourlyRate']) ? $this->_data['HourlyRate'] : null;
     }
 
     /**
@@ -195,7 +195,7 @@ class SalaryAndWage extends Remote\Object {
      * @return string
      */
     public function getAnnualSalary() {
-        return $this->_data['AnnualSalary'];
+        return isset($this->_data['AnnualSalary']) ? $this->_data['AnnualSalary'] : null;
     }
 
     /**
@@ -212,7 +212,7 @@ class SalaryAndWage extends Remote\Object {
      * @return string
      */
     public function getStandardHoursPerWeek() {
-        return $this->_data['StandardHoursPerWeek'];
+        return isset($this->_data['StandardHoursPerWeek']) ? $this->_data['StandardHoursPerWeek'] : null;
     }
 
     /**
@@ -229,7 +229,7 @@ class SalaryAndWage extends Remote\Object {
      * @return \DateTime
      */
     public function getEffectiveDate() {
-        return $this->_data['EffectiveDate'];
+        return isset($this->_data['EffectiveDate']) ? $this->_data['EffectiveDate'] : null;
     }
 
     /**

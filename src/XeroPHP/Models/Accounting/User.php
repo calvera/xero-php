@@ -128,7 +128,7 @@ class User extends Remote\Object {
      * @return string
      */
     public function getUserID() {
-        return $this->_data['UserID'];
+        return isset($this->_data['UserID']) ? $this->_data['UserID'] : null;
     }
 
     /**
@@ -145,7 +145,7 @@ class User extends Remote\Object {
      * @return string
      */
     public function getEmailAddress() {
-        return $this->_data['EmailAddress'];
+        return isset($this->_data['EmailAddress']) ? $this->_data['EmailAddress'] : null;
     }
 
     /**
@@ -162,7 +162,7 @@ class User extends Remote\Object {
      * @return string
      */
     public function getFirstName() {
-        return $this->_data['FirstName'];
+        return isset($this->_data['FirstName']) ? $this->_data['FirstName'] : null;
     }
 
     /**
@@ -179,7 +179,7 @@ class User extends Remote\Object {
      * @return string
      */
     public function getLastName() {
-        return $this->_data['LastName'];
+        return isset($this->_data['LastName']) ? $this->_data['LastName'] : null;
     }
 
     /**
@@ -196,7 +196,7 @@ class User extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
     /**
@@ -213,7 +213,7 @@ class User extends Remote\Object {
      * @return bool
      */
     public function getIsSubscriber() {
-        return $this->_data['IsSubscriber'];
+        return isset($this->_data['IsSubscriber']) ? $this->_data['IsSubscriber'] : null;
     }
 
     /**
@@ -230,7 +230,7 @@ class User extends Remote\Object {
      * @return string
      */
     public function getOrganisationRole() {
-        return $this->_data['OrganisationRole'];
+        return isset($this->_data['OrganisationRole']) ? $this->_data['OrganisationRole'] : null;
     }
 
     /**

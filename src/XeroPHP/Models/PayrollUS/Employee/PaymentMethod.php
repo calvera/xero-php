@@ -96,7 +96,7 @@ class PaymentMethod extends Remote\Object {
      * @return string
      */
     public function getPaymentMethodType() {
-        return $this->_data['PaymentMethodType'];
+        return isset($this->_data['PaymentMethodType']) ? $this->_data['PaymentMethodType'] : null;
     }
 
     /**
@@ -113,7 +113,7 @@ class PaymentMethod extends Remote\Object {
      * @return BankAccount[]
      */
     public function getBankAccounts() {
-        return $this->_data['BankAccounts'];
+        return isset($this->_data['BankAccounts']) ? $this->_data['BankAccounts'] : null;
     }
 
     /**

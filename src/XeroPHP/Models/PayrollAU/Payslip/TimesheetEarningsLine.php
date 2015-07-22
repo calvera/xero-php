@@ -99,7 +99,7 @@ class TimesheetEarningsLine extends Remote\Object {
      * @return string
      */
     public function getEarningsRateID() {
-        return $this->_data['EarningsRateID'];
+        return isset($this->_data['EarningsRateID']) ? $this->_data['EarningsRateID'] : null;
     }
 
     /**
@@ -116,7 +116,7 @@ class TimesheetEarningsLine extends Remote\Object {
      * @return float
      */
     public function getRatePerUnit() {
-        return $this->_data['RatePerUnit'];
+        return isset($this->_data['RatePerUnit']) ? $this->_data['RatePerUnit'] : null;
     }
 
     /**
@@ -133,7 +133,7 @@ class TimesheetEarningsLine extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**

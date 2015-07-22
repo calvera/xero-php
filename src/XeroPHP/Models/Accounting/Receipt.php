@@ -196,7 +196,7 @@ class Receipt extends Remote\Object {
      * @return \DateTime
      */
     public function getDate() {
-        return $this->_data['Date'];
+        return isset($this->_data['Date']) ? $this->_data['Date'] : null;
     }
 
     /**
@@ -213,7 +213,7 @@ class Receipt extends Remote\Object {
      * @return Contact
      */
     public function getContact() {
-        return $this->_data['Contact'];
+        return isset($this->_data['Contact']) ? $this->_data['Contact'] : null;
     }
 
     /**
@@ -230,7 +230,7 @@ class Receipt extends Remote\Object {
      * @return LineItem[]
      */
     public function getLineItems() {
-        return $this->_data['LineItems'];
+        return isset($this->_data['LineItems']) ? $this->_data['LineItems'] : null;
     }
 
     /**
@@ -247,7 +247,7 @@ class Receipt extends Remote\Object {
      * @return User
      */
     public function getUser() {
-        return $this->_data['User'];
+        return isset($this->_data['User']) ? $this->_data['User'] : null;
     }
 
     /**
@@ -264,7 +264,7 @@ class Receipt extends Remote\Object {
      * @return string
      */
     public function getReference() {
-        return $this->_data['Reference'];
+        return isset($this->_data['Reference']) ? $this->_data['Reference'] : null;
     }
 
     /**
@@ -281,7 +281,7 @@ class Receipt extends Remote\Object {
      * @return string
      */
     public function getLineAmountTypes() {
-        return $this->_data['LineAmountTypes'];
+        return isset($this->_data['LineAmountTypes']) ? $this->_data['LineAmountTypes'] : null;
     }
 
     /**
@@ -298,7 +298,7 @@ class Receipt extends Remote\Object {
      * @return float
      */
     public function getSubTotal() {
-        return $this->_data['SubTotal'];
+        return isset($this->_data['SubTotal']) ? $this->_data['SubTotal'] : null;
     }
 
     /**
@@ -315,7 +315,7 @@ class Receipt extends Remote\Object {
      * @return float
      */
     public function getTotalTax() {
-        return $this->_data['TotalTax'];
+        return isset($this->_data['TotalTax']) ? $this->_data['TotalTax'] : null;
     }
 
     /**
@@ -332,7 +332,7 @@ class Receipt extends Remote\Object {
      * @return float
      */
     public function getTotal() {
-        return $this->_data['Total'];
+        return isset($this->_data['Total']) ? $this->_data['Total'] : null;
     }
 
     /**
@@ -349,7 +349,7 @@ class Receipt extends Remote\Object {
      * @return string
      */
     public function getReceiptID() {
-        return $this->_data['ReceiptID'];
+        return isset($this->_data['ReceiptID']) ? $this->_data['ReceiptID'] : null;
     }
 
     /**
@@ -366,7 +366,7 @@ class Receipt extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
 
@@ -374,7 +374,7 @@ class Receipt extends Remote\Object {
      * @return string
      */
     public function getReceiptNumber() {
-        return $this->_data['ReceiptNumber'];
+        return isset($this->_data['ReceiptNumber']) ? $this->_data['ReceiptNumber'] : null;
     }
 
 
@@ -382,7 +382,7 @@ class Receipt extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
 
@@ -390,7 +390,7 @@ class Receipt extends Remote\Object {
      * @return bool
      */
     public function getHasAttachments() {
-        return $this->_data['HasAttachments'];
+        return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
 
@@ -398,7 +398,7 @@ class Receipt extends Remote\Object {
      * @return string
      */
     public function getUrl() {
-        return $this->_data['Url'];
+        return isset($this->_data['Url']) ? $this->_data['Url'] : null;
     }
 
 

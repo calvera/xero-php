@@ -111,7 +111,7 @@ class TrackingCategory extends Remote\Object {
      * @return string
      */
     public function getTrackingCategoryID() {
-        return $this->_data['TrackingCategoryID'];
+        return isset($this->_data['TrackingCategoryID']) ? $this->_data['TrackingCategoryID'] : null;
     }
 
     /**
@@ -128,7 +128,7 @@ class TrackingCategory extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -145,7 +145,7 @@ class TrackingCategory extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -162,7 +162,7 @@ class TrackingCategory extends Remote\Object {
      * @return TrackingOption[]
      */
     public function getOptions() {
-        return $this->_data['Options'];
+        return isset($this->_data['Options']) ? $this->_data['Options'] : null;
     }
 
     /**

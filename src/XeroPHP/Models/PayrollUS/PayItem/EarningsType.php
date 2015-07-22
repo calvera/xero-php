@@ -178,7 +178,7 @@ class EarningsType extends Remote\Object {
      * @return EarningsType
      */
     public function getEarningsType() {
-        return $this->_data['EarningsType'];
+        return isset($this->_data['EarningsType']) ? $this->_data['EarningsType'] : null;
     }
 
     /**
@@ -195,7 +195,7 @@ class EarningsType extends Remote\Object {
      * @return string
      */
     public function getDisplayName() {
-        return $this->_data['DisplayName'];
+        return isset($this->_data['DisplayName']) ? $this->_data['DisplayName'] : null;
     }
 
     /**
@@ -212,7 +212,7 @@ class EarningsType extends Remote\Object {
      * @return string
      */
     public function getExpenseAccountCode() {
-        return $this->_data['ExpenseAccountCode'];
+        return isset($this->_data['ExpenseAccountCode']) ? $this->_data['ExpenseAccountCode'] : null;
     }
 
     /**
@@ -229,7 +229,7 @@ class EarningsType extends Remote\Object {
      * @return string
      */
     public function getEarningsCategory() {
-        return $this->_data['EarningsCategory'];
+        return isset($this->_data['EarningsCategory']) ? $this->_data['EarningsCategory'] : null;
     }
 
     /**
@@ -246,7 +246,7 @@ class EarningsType extends Remote\Object {
      * @return string
      */
     public function getRateType() {
-        return $this->_data['RateType'];
+        return isset($this->_data['RateType']) ? $this->_data['RateType'] : null;
     }
 
     /**
@@ -263,7 +263,7 @@ class EarningsType extends Remote\Object {
      * @return string
      */
     public function getTypeOfUnits() {
-        return $this->_data['TypeOfUnits'];
+        return isset($this->_data['TypeOfUnits']) ? $this->_data['TypeOfUnits'] : null;
     }
 
     /**
@@ -280,7 +280,7 @@ class EarningsType extends Remote\Object {
      * @return string
      */
     public function getEarningsRateID() {
-        return $this->_data['EarningsRateID'];
+        return isset($this->_data['EarningsRateID']) ? $this->_data['EarningsRateID'] : null;
     }
 
     /**
@@ -297,7 +297,7 @@ class EarningsType extends Remote\Object {
      * @return float
      */
     public function getMultiple() {
-        return $this->_data['Multiple'];
+        return isset($this->_data['Multiple']) ? $this->_data['Multiple'] : null;
     }
 
     /**
@@ -314,7 +314,7 @@ class EarningsType extends Remote\Object {
      * @return string
      */
     public function getDoNotAccrueTimeOff() {
-        return $this->_data['DoNotAccrueTimeOff'];
+        return isset($this->_data['DoNotAccrueTimeOff']) ? $this->_data['DoNotAccrueTimeOff'] : null;
     }
 
     /**
@@ -331,7 +331,7 @@ class EarningsType extends Remote\Object {
      * @return string
      */
     public function getIsSupplemental() {
-        return $this->_data['IsSupplemental'];
+        return isset($this->_data['IsSupplemental']) ? $this->_data['IsSupplemental'] : null;
     }
 
     /**
@@ -348,7 +348,7 @@ class EarningsType extends Remote\Object {
      * @return float
      */
     public function getAmount() {
-        return $this->_data['Amount'];
+        return isset($this->_data['Amount']) ? $this->_data['Amount'] : null;
     }
 
     /**

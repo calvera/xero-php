@@ -111,7 +111,7 @@ class Phone extends Remote\Object {
      * @return string
      */
     public function getPhoneType() {
-        return $this->_data['PhoneType'];
+        return isset($this->_data['PhoneType']) ? $this->_data['PhoneType'] : null;
     }
 
     /**
@@ -128,7 +128,7 @@ class Phone extends Remote\Object {
      * @return string
      */
     public function getPhoneNumber() {
-        return $this->_data['PhoneNumber'];
+        return isset($this->_data['PhoneNumber']) ? $this->_data['PhoneNumber'] : null;
     }
 
     /**
@@ -145,7 +145,7 @@ class Phone extends Remote\Object {
      * @return string
      */
     public function getPhoneAreaCode() {
-        return $this->_data['PhoneAreaCode'];
+        return isset($this->_data['PhoneAreaCode']) ? $this->_data['PhoneAreaCode'] : null;
     }
 
     /**
@@ -162,7 +162,7 @@ class Phone extends Remote\Object {
      * @return string
      */
     public function getPhoneCountryCode() {
-        return $this->_data['PhoneCountryCode'];
+        return isset($this->_data['PhoneCountryCode']) ? $this->_data['PhoneCountryCode'] : null;
     }
 
     /**

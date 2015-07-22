@@ -220,7 +220,7 @@ class Paystub extends Remote\Object {
      * @return string
      */
     public function getEmployeeID() {
-        return $this->_data['EmployeeID'];
+        return isset($this->_data['EmployeeID']) ? $this->_data['EmployeeID'] : null;
     }
 
     /**
@@ -237,7 +237,7 @@ class Paystub extends Remote\Object {
      * @return string
      */
     public function getPaystubID() {
-        return $this->_data['PaystubID'];
+        return isset($this->_data['PaystubID']) ? $this->_data['PaystubID'] : null;
     }
 
     /**
@@ -254,7 +254,7 @@ class Paystub extends Remote\Object {
      * @return string
      */
     public function getPayRunID() {
-        return $this->_data['PayRunID'];
+        return isset($this->_data['PayRunID']) ? $this->_data['PayRunID'] : null;
     }
 
     /**
@@ -271,7 +271,7 @@ class Paystub extends Remote\Object {
      * @return string
      */
     public function getFirstName() {
-        return $this->_data['FirstName'];
+        return isset($this->_data['FirstName']) ? $this->_data['FirstName'] : null;
     }
 
     /**
@@ -288,7 +288,7 @@ class Paystub extends Remote\Object {
      * @return string
      */
     public function getLastName() {
-        return $this->_data['LastName'];
+        return isset($this->_data['LastName']) ? $this->_data['LastName'] : null;
     }
 
     /**
@@ -305,7 +305,7 @@ class Paystub extends Remote\Object {
      * @return string
      */
     public function getLastEdited() {
-        return $this->_data['LastEdited'];
+        return isset($this->_data['LastEdited']) ? $this->_data['LastEdited'] : null;
     }
 
     /**
@@ -322,7 +322,7 @@ class Paystub extends Remote\Object {
      * @return float[]
      */
     public function getEarnings() {
-        return $this->_data['Earnings'];
+        return isset($this->_data['Earnings']) ? $this->_data['Earnings'] : null;
     }
 
     /**
@@ -339,7 +339,7 @@ class Paystub extends Remote\Object {
      * @return float[]
      */
     public function getDeductions() {
-        return $this->_data['Deductions'];
+        return isset($this->_data['Deductions']) ? $this->_data['Deductions'] : null;
     }
 
     /**
@@ -356,7 +356,7 @@ class Paystub extends Remote\Object {
      * @return float
      */
     public function getTax() {
-        return $this->_data['Tax'];
+        return isset($this->_data['Tax']) ? $this->_data['Tax'] : null;
     }
 
     /**
@@ -373,7 +373,7 @@ class Paystub extends Remote\Object {
      * @return float[]
      */
     public function getReimbursements() {
-        return $this->_data['Reimbursements'];
+        return isset($this->_data['Reimbursements']) ? $this->_data['Reimbursements'] : null;
     }
 
     /**
@@ -390,7 +390,7 @@ class Paystub extends Remote\Object {
      * @return float
      */
     public function getNetPay() {
-        return $this->_data['NetPay'];
+        return isset($this->_data['NetPay']) ? $this->_data['NetPay'] : null;
     }
 
     /**
@@ -407,7 +407,7 @@ class Paystub extends Remote\Object {
      * @return string
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
     /**
@@ -424,7 +424,7 @@ class Paystub extends Remote\Object {
      * @return EarningsLine[]
      */
     public function getEarningsLines() {
-        return $this->_data['EarningsLines'];
+        return isset($this->_data['EarningsLines']) ? $this->_data['EarningsLines'] : null;
     }
 
     /**
@@ -441,7 +441,7 @@ class Paystub extends Remote\Object {
      * @return LeaveEarningsLine[]
      */
     public function getLeaveEarningsLines() {
-        return $this->_data['LeaveEarningsLines'];
+        return isset($this->_data['LeaveEarningsLines']) ? $this->_data['LeaveEarningsLines'] : null;
     }
 
     /**
@@ -458,7 +458,7 @@ class Paystub extends Remote\Object {
      * @return TimesheetEarningsLine[]
      */
     public function getTimesheetEarningsLines() {
-        return $this->_data['TimesheetEarningsLines'];
+        return isset($this->_data['TimesheetEarningsLines']) ? $this->_data['TimesheetEarningsLines'] : null;
     }
 
     /**
@@ -475,7 +475,7 @@ class Paystub extends Remote\Object {
      * @return DeductionLine[]
      */
     public function getDeductionLines() {
-        return $this->_data['DeductionLines'];
+        return isset($this->_data['DeductionLines']) ? $this->_data['DeductionLines'] : null;
     }
 
     /**
@@ -492,7 +492,7 @@ class Paystub extends Remote\Object {
      * @return ReimbursementLine[]
      */
     public function getReimbursementLines() {
-        return $this->_data['ReimbursementLines'];
+        return isset($this->_data['ReimbursementLines']) ? $this->_data['ReimbursementLines'] : null;
     }
 
     /**
@@ -509,7 +509,7 @@ class Paystub extends Remote\Object {
      * @return BenefitLine[]
      */
     public function getBenefitLines() {
-        return $this->_data['BenefitLines'];
+        return isset($this->_data['BenefitLines']) ? $this->_data['BenefitLines'] : null;
     }
 
     /**
@@ -526,7 +526,7 @@ class Paystub extends Remote\Object {
      * @return TimeOffLine[]
      */
     public function getTimeOffLines() {
-        return $this->_data['TimeOffLines'];
+        return isset($this->_data['TimeOffLines']) ? $this->_data['TimeOffLines'] : null;
     }
 
     /**

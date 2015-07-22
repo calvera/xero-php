@@ -120,7 +120,7 @@ class HomeAddress extends Remote\Object {
      * @return string
      */
     public function getAddressLine1() {
-        return $this->_data['AddressLine1'];
+        return isset($this->_data['AddressLine1']) ? $this->_data['AddressLine1'] : null;
     }
 
     /**
@@ -137,7 +137,7 @@ class HomeAddress extends Remote\Object {
      * @return string
      */
     public function getAddressLine2() {
-        return $this->_data['AddressLine2'];
+        return isset($this->_data['AddressLine2']) ? $this->_data['AddressLine2'] : null;
     }
 
     /**
@@ -154,7 +154,7 @@ class HomeAddress extends Remote\Object {
      * @return string
      */
     public function getCity() {
-        return $this->_data['City'];
+        return isset($this->_data['City']) ? $this->_data['City'] : null;
     }
 
     /**
@@ -171,7 +171,7 @@ class HomeAddress extends Remote\Object {
      * @return string
      */
     public function getRegion() {
-        return $this->_data['Region'];
+        return isset($this->_data['Region']) ? $this->_data['Region'] : null;
     }
 
     /**
@@ -188,7 +188,7 @@ class HomeAddress extends Remote\Object {
      * @return string
      */
     public function getPostalCode() {
-        return $this->_data['PostalCode'];
+        return isset($this->_data['PostalCode']) ? $this->_data['PostalCode'] : null;
     }
 
     /**
@@ -205,7 +205,7 @@ class HomeAddress extends Remote\Object {
      * @return string
      */
     public function getCountry() {
-        return $this->_data['Country'];
+        return isset($this->_data['Country']) ? $this->_data['Country'] : null;
     }
 
     /**

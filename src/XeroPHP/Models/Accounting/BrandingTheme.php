@@ -107,7 +107,7 @@ class BrandingTheme extends Remote\Object {
      * @return string
      */
     public function getBrandingThemeID() {
-        return $this->_data['BrandingThemeID'];
+        return isset($this->_data['BrandingThemeID']) ? $this->_data['BrandingThemeID'] : null;
     }
 
     /**
@@ -124,7 +124,7 @@ class BrandingTheme extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -141,7 +141,7 @@ class BrandingTheme extends Remote\Object {
      * @return int
      */
     public function getSortOrder() {
-        return $this->_data['SortOrder'];
+        return isset($this->_data['SortOrder']) ? $this->_data['SortOrder'] : null;
     }
 
     /**
@@ -158,7 +158,7 @@ class BrandingTheme extends Remote\Object {
      * @return \DateTime
      */
     public function getCreatedDateUTC() {
-        return $this->_data['CreatedDateUTC'];
+        return isset($this->_data['CreatedDateUTC']) ? $this->_data['CreatedDateUTC'] : null;
     }
 
     /**

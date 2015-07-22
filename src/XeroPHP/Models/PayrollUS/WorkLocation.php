@@ -136,7 +136,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getStreetAddress() {
-        return $this->_data['StreetAddress'];
+        return isset($this->_data['StreetAddress']) ? $this->_data['StreetAddress'] : null;
     }
 
     /**
@@ -153,7 +153,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getCity() {
-        return $this->_data['City'];
+        return isset($this->_data['City']) ? $this->_data['City'] : null;
     }
 
     /**
@@ -170,7 +170,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getState() {
-        return $this->_data['State'];
+        return isset($this->_data['State']) ? $this->_data['State'] : null;
     }
 
     /**
@@ -187,7 +187,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getLatitude() {
-        return $this->_data['Latitude'];
+        return isset($this->_data['Latitude']) ? $this->_data['Latitude'] : null;
     }
 
     /**
@@ -204,7 +204,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getLongitude() {
-        return $this->_data['Longitude'];
+        return isset($this->_data['Longitude']) ? $this->_data['Longitude'] : null;
     }
 
     /**
@@ -221,7 +221,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getWorkLocationID() {
-        return $this->_data['WorkLocationID'];
+        return isset($this->_data['WorkLocationID']) ? $this->_data['WorkLocationID'] : null;
     }
 
     /**
@@ -238,7 +238,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getSuitOrAptOrUnit() {
-        return $this->_data['SuitOrAptOrUnit'];
+        return isset($this->_data['SuitOrAptOrUnit']) ? $this->_data['SuitOrAptOrUnit'] : null;
     }
 
     /**
@@ -255,7 +255,7 @@ class WorkLocation extends Remote\Object {
      * @return string
      */
     public function getIsPrimary() {
-        return $this->_data['IsPrimary'];
+        return isset($this->_data['IsPrimary']) ? $this->_data['IsPrimary'] : null;
     }
 
     /**

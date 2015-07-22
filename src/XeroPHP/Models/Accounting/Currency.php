@@ -101,7 +101,7 @@ class Currency extends Remote\Object {
      * @return \DateTime
      */
     public function getModifiedAfter() {
-        return $this->_data['ModifiedAfter'];
+        return isset($this->_data['ModifiedAfter']) ? $this->_data['ModifiedAfter'] : null;
     }
 
     /**
@@ -118,7 +118,7 @@ class Currency extends Remote\Object {
      * @return string
      */
     public function getCode() {
-        return $this->_data['Code'];
+        return isset($this->_data['Code']) ? $this->_data['Code'] : null;
     }
 
     /**
@@ -135,7 +135,7 @@ class Currency extends Remote\Object {
      * @return string
      */
     public function getDescription() {
-        return $this->_data['Description'];
+        return isset($this->_data['Description']) ? $this->_data['Description'] : null;
     }
 
     /**

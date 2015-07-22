@@ -228,7 +228,7 @@ class BankTransaction extends Remote\Object {
      * @return string
      */
     public function getType() {
-        return $this->_data['Type'];
+        return isset($this->_data['Type']) ? $this->_data['Type'] : null;
     }
 
     /**
@@ -245,7 +245,7 @@ class BankTransaction extends Remote\Object {
      * @return Contact
      */
     public function getContact() {
-        return $this->_data['Contact'];
+        return isset($this->_data['Contact']) ? $this->_data['Contact'] : null;
     }
 
     /**
@@ -262,7 +262,7 @@ class BankTransaction extends Remote\Object {
      * @return LineItem[]
      */
     public function getLineItems() {
-        return $this->_data['LineItems'];
+        return isset($this->_data['LineItems']) ? $this->_data['LineItems'] : null;
     }
 
     /**
@@ -279,7 +279,7 @@ class BankTransaction extends Remote\Object {
      * @return BankAccount
      */
     public function getBankAccount() {
-        return $this->_data['BankAccount'];
+        return isset($this->_data['BankAccount']) ? $this->_data['BankAccount'] : null;
     }
 
     /**
@@ -296,7 +296,7 @@ class BankTransaction extends Remote\Object {
      * @return bool
      */
     public function getIsReconciled() {
-        return $this->_data['IsReconciled'];
+        return isset($this->_data['IsReconciled']) ? $this->_data['IsReconciled'] : null;
     }
 
     /**
@@ -313,7 +313,7 @@ class BankTransaction extends Remote\Object {
      * @return \DateTime
      */
     public function getDate() {
-        return $this->_data['Date'];
+        return isset($this->_data['Date']) ? $this->_data['Date'] : null;
     }
 
     /**
@@ -330,7 +330,7 @@ class BankTransaction extends Remote\Object {
      * @return string
      */
     public function getReference() {
-        return $this->_data['Reference'];
+        return isset($this->_data['Reference']) ? $this->_data['Reference'] : null;
     }
 
     /**
@@ -347,7 +347,7 @@ class BankTransaction extends Remote\Object {
      * @return string
      */
     public function getCurrencyCode() {
-        return $this->_data['CurrencyCode'];
+        return isset($this->_data['CurrencyCode']) ? $this->_data['CurrencyCode'] : null;
     }
 
     /**
@@ -364,7 +364,7 @@ class BankTransaction extends Remote\Object {
      * @return float
      */
     public function getCurrencyRate() {
-        return $this->_data['CurrencyRate'];
+        return isset($this->_data['CurrencyRate']) ? $this->_data['CurrencyRate'] : null;
     }
 
     /**
@@ -381,7 +381,7 @@ class BankTransaction extends Remote\Object {
      * @return string
      */
     public function getUrl() {
-        return $this->_data['Url'];
+        return isset($this->_data['Url']) ? $this->_data['Url'] : null;
     }
 
     /**
@@ -398,7 +398,7 @@ class BankTransaction extends Remote\Object {
      * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
@@ -415,7 +415,7 @@ class BankTransaction extends Remote\Object {
      * @return string
      */
     public function getLineAmountTypes() {
-        return $this->_data['LineAmountTypes'];
+        return isset($this->_data['LineAmountTypes']) ? $this->_data['LineAmountTypes'] : null;
     }
 
     /**
@@ -432,7 +432,7 @@ class BankTransaction extends Remote\Object {
      * @return float
      */
     public function getSubTotal() {
-        return $this->_data['SubTotal'];
+        return isset($this->_data['SubTotal']) ? $this->_data['SubTotal'] : null;
     }
 
     /**
@@ -449,7 +449,7 @@ class BankTransaction extends Remote\Object {
      * @return float
      */
     public function getTotalTax() {
-        return $this->_data['TotalTax'];
+        return isset($this->_data['TotalTax']) ? $this->_data['TotalTax'] : null;
     }
 
     /**
@@ -466,7 +466,7 @@ class BankTransaction extends Remote\Object {
      * @return float
      */
     public function getTotal() {
-        return $this->_data['Total'];
+        return isset($this->_data['Total']) ? $this->_data['Total'] : null;
     }
 
     /**
@@ -483,7 +483,7 @@ class BankTransaction extends Remote\Object {
      * @return string
      */
     public function getBankTransactionID() {
-        return $this->_data['BankTransactionID'];
+        return isset($this->_data['BankTransactionID']) ? $this->_data['BankTransactionID'] : null;
     }
 
     /**
@@ -500,7 +500,7 @@ class BankTransaction extends Remote\Object {
      * @return \DateTime
      */
     public function getUpdatedDateUTC() {
-        return $this->_data['UpdatedDateUTC'];
+        return isset($this->_data['UpdatedDateUTC']) ? $this->_data['UpdatedDateUTC'] : null;
     }
 
 
@@ -508,7 +508,7 @@ class BankTransaction extends Remote\Object {
      * @return bool
      */
     public function getHasAttachments() {
-        return $this->_data['HasAttachments'];
+        return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
 

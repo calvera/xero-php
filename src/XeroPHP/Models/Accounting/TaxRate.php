@@ -27,9 +27,9 @@ class TaxRate extends Remote\Object {
      */
 
     /**
-     * The Status of the Tax Rate e.g. ACTIVE, DELETED
+     * See Status Codes
      *
-     * @property float Status
+     * @property string Status
      */
 
     /**
@@ -80,6 +80,65 @@ class TaxRate extends Remote\Object {
      * @property float EffectiveRate
      */
 
+
+    const TAX_STATUS_ACTIVE   = 'ACTIVE';
+    const TAX_STATUS_DELETED  = 'DELETED';
+    const TAX_STATUS_ARCHIVED = 'ARCHIVED';
+
+    const AUSTRALIUM_TAX_TYPE        = 'TAX TYPE';
+    const AUSTRALIUM_OUTPUT          = 'OUTPUT';
+    const AUSTRALIUM_INPUT           = 'INPUT';
+    const AUSTRALIUM_CAPEXINPUT      = 'CAPEXINPUT';
+    const AUSTRALIUM_EXEMPTEXPORT    = 'EXEMPTEXPORT';
+    const AUSTRALIUM_EXEMPTEXPENSES  = 'EXEMPTEXPENSES';
+    const AUSTRALIUM_EXEMPTCAPITAL   = 'EXEMPTCAPITAL';
+    const AUSTRALIUM_EXEMPTOUTPUT    = 'EXEMPTOUTPUT';
+    const AUSTRALIUM_INPUTTAXED      = 'INPUTTAXED';
+    const AUSTRALIUM_BASEXCLUDED     = 'BASEXCLUDED';
+    const AUSTRALIUM_GSTONCAPIMPORTS = 'GSTONCAPIMPORTS';
+    const AUSTRALIUM_GSTONIMPORTS    = 'GSTONIMPORTS';
+
+    const GLOBAL_TAX_TYPE     = 'TAX TYPE';
+    const GLOBAL_INPUT        = 'INPUT';
+    const GLOBAL_NONE         = 'NONE';
+    const GLOBAL_OUTPUT       = 'OUTPUT';
+    const GLOBAL_GSTONIMPORTS = 'GSTONIMPORTS';
+
+    const NEW_ZEALAND_TAX_TYPE     = 'TAX TYPE';
+    const NEW_ZEALAND_INPUT2       = 'INPUT2';
+    const NEW_ZEALAND_NONE         = 'NONE';
+    const NEW_ZEALAND_ZERORATED    = 'ZERORATED';
+    const NEW_ZEALAND_OUTPUT2      = 'OUTPUT2';
+    const NEW_ZEALAND_GSTONIMPORTS = 'GSTONIMPORTS';
+
+    const UNITED_KINGDOM_TAX_TYPE           = 'TAX TYPE';
+    const UNITED_KINGDOM_CAPEXINPUT         = 'CAPEXINPUT';
+    const UNITED_KINGDOM_CAPEXINPUT2        = 'CAPEXINPUT2';
+    const UNITED_KINGDOM_CAPEXOUTPUT        = 'CAPEXOUTPUT';
+    const UNITED_KINGDOM_CAPEXOUTPUT2       = 'CAPEXOUTPUT2';
+    const UNITED_KINGDOM_CAPEXSRINPUT       = 'CAPEXSRINPUT';
+    const UNITED_KINGDOM_CAPEXSROUTPUT      = 'CAPEXSROUTPUT';
+    const UNITED_KINGDOM_ECZRINPUT          = 'ECZRINPUT';
+    const UNITED_KINGDOM_ECZROUTPUT         = 'ECZROUTPUT';
+    const UNITED_KINGDOM_ECZROUTPUTSERVICES = 'ECZROUTPUTSERVICES';
+    const UNITED_KINGDOM_EXEMPTINPUT        = 'EXEMPTINPUT';
+    const UNITED_KINGDOM_EXEMPTOUTPUT       = 'EXEMPTOUTPUT';
+    const UNITED_KINGDOM_GSTONIMPORTS       = 'GSTONIMPORTS';
+    const UNITED_KINGDOM_INPUT2             = 'INPUT2';
+    const UNITED_KINGDOM_NONE               = 'NONE';
+    const UNITED_KINGDOM_OUTPUT2            = 'OUTPUT2';
+    const UNITED_KINGDOM_RRINPUT            = 'RRINPUT';
+    const UNITED_KINGDOM_RROUTPUT           = 'RROUTPUT';
+    const UNITED_KINGDOM_SRINPUT            = 'SRINPUT';
+    const UNITED_KINGDOM_SROUTPUT           = 'SROUTPUT';
+    const UNITED_KINGDOM_ZERORATEDINPUT     = 'ZERORATEDINPUT';
+    const UNITED_KINGDOM_ZERORATEDOUTPUT    = 'ZERORATEDOUTPUT';
+
+    const UNITED_STATE_TAX_TYPE     = 'TAX TYPE';
+    const UNITED_STATE_INPUT        = 'INPUT';
+    const UNITED_STATE_NONE         = 'NONE';
+    const UNITED_STATE_OUTPUT       = 'OUTPUT';
+    const UNITED_STATE_GSTONIMPORTS = 'GSTONIMPORTS';
 
 
     /**
@@ -147,9 +206,9 @@ class TaxRate extends Remote\Object {
     public static function getProperties() {
         return array(
             'Name' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
-            'TaxType' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
+            'TaxType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'TaxComponents' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\TaxRate\\TaxComponent', true, false),
-            'Status' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
+            'Status' => array (false, self::PROPERTY_TYPE_ENUM, null, false, false),
             'ReportTaxType' => array (true, self::PROPERTY_TYPE_ENUM, null, false, false),
             'CanApplyToAssets' => array (false, self::PROPERTY_TYPE_FLOAT, null, true, false),
             'CanApplyToEquity' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
@@ -166,7 +225,7 @@ class TaxRate extends Remote\Object {
      * @return string
      */
     public function getName() {
-        return $this->_data['Name'];
+        return isset($this->_data['Name']) ? $this->_data['Name'] : null;
     }
 
     /**
@@ -183,7 +242,7 @@ class TaxRate extends Remote\Object {
      * @return string
      */
     public function getTaxType() {
-        return $this->_data['TaxType'];
+        return isset($this->_data['TaxType']) ? $this->_data['TaxType'] : null;
     }
 
     /**
@@ -200,7 +259,7 @@ class TaxRate extends Remote\Object {
      * @return TaxComponent[]
      */
     public function getTaxComponents() {
-        return $this->_data['TaxComponents'];
+        return isset($this->_data['TaxComponents']) ? $this->_data['TaxComponents'] : null;
     }
 
     /**
@@ -214,14 +273,14 @@ class TaxRate extends Remote\Object {
     }
 
     /**
-     * @return float
+     * @return string
      */
     public function getStatus() {
-        return $this->_data['Status'];
+        return isset($this->_data['Status']) ? $this->_data['Status'] : null;
     }
 
     /**
-     * @param float $value
+     * @param string $value
      * @return TaxRate
      */
     public function setStatus($value) {
@@ -234,7 +293,7 @@ class TaxRate extends Remote\Object {
      * @return string
      */
     public function getReportTaxType() {
-        return $this->_data['ReportTaxType'];
+        return isset($this->_data['ReportTaxType']) ? $this->_data['ReportTaxType'] : null;
     }
 
     /**
@@ -251,7 +310,7 @@ class TaxRate extends Remote\Object {
      * @return float[]
      */
     public function getCanApplyToAssets() {
-        return $this->_data['CanApplyToAssets'];
+        return isset($this->_data['CanApplyToAssets']) ? $this->_data['CanApplyToAssets'] : null;
     }
 
 
@@ -259,7 +318,7 @@ class TaxRate extends Remote\Object {
      * @return float
      */
     public function getCanApplyToEquity() {
-        return $this->_data['CanApplyToEquity'];
+        return isset($this->_data['CanApplyToEquity']) ? $this->_data['CanApplyToEquity'] : null;
     }
 
 
@@ -267,7 +326,7 @@ class TaxRate extends Remote\Object {
      * @return float[]
      */
     public function getCanApplyToExpenses() {
-        return $this->_data['CanApplyToExpenses'];
+        return isset($this->_data['CanApplyToExpenses']) ? $this->_data['CanApplyToExpenses'] : null;
     }
 
 
@@ -275,7 +334,7 @@ class TaxRate extends Remote\Object {
      * @return float[]
      */
     public function getCanApplyToLiabilities() {
-        return $this->_data['CanApplyToLiabilities'];
+        return isset($this->_data['CanApplyToLiabilities']) ? $this->_data['CanApplyToLiabilities'] : null;
     }
 
 
@@ -283,7 +342,7 @@ class TaxRate extends Remote\Object {
      * @return float
      */
     public function getCanApplyToRevenue() {
-        return $this->_data['CanApplyToRevenue'];
+        return isset($this->_data['CanApplyToRevenue']) ? $this->_data['CanApplyToRevenue'] : null;
     }
 
 
@@ -291,7 +350,7 @@ class TaxRate extends Remote\Object {
      * @return float
      */
     public function getDisplayTaxRate() {
-        return $this->_data['DisplayTaxRate'];
+        return isset($this->_data['DisplayTaxRate']) ? $this->_data['DisplayTaxRate'] : null;
     }
 
 
@@ -299,7 +358,7 @@ class TaxRate extends Remote\Object {
      * @return float
      */
     public function getEffectiveRate() {
-        return $this->_data['EffectiveRate'];
+        return isset($this->_data['EffectiveRate']) ? $this->_data['EffectiveRate'] : null;
     }
 
 
