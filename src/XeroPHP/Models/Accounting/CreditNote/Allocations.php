@@ -1,4 +1,5 @@
 <?php
+
 namespace XeroPHP\Models\Accounting\CreditNote;
 
 use XeroPHP\Exception;
@@ -138,18 +139,38 @@ class Allocations extends Object
             if (!self::supportsMethod($method)) {
                 throw new Exception('%s doesn\'t support [%s] via the API', get_class($this), $method);
             }
-            //Put in an array with the first level containing only the 'root node'.
-            $data = [self::getRootNodeName() => $this->toStringArray()];
 
-            $url = new URL($this->_application, $uri);
-            $request = new Request($this->_application, $url, $method);
+            $response = null;
 
-            $request->setBody(Helpers::arrayToXML($data))->send();
-            $response = $request->getResponse();
-
-            if (false !== $element = current($response->getElements())) {
-                $this->fromStringArray($element);
+            if (empty($this->getAllocations())) {
+                return $response;
             }
+
+            foreach ($this->getAllocations() as $allocation) {
+
+                //Put in an array with the first level containing only the 'root node'.
+                $data = [
+                    self::getRootNodeName() => [
+                        'Allocation' => [
+                            'AppliedAmount' => $allocation->getAppliedAmount(),
+                            'Invoice' => [
+                                'InvoiceID' => $allocation->getInvoice()->getInvoiceID(),
+                            ]
+                        ]
+                    ]
+                ];
+
+                $url = new URL($this->_application, $uri);
+                $request = new Request($this->_application, $url, $method);
+
+                $request->setBody(Helpers::arrayToXML($data))->send();
+                $response = $request->getResponse();
+
+                if (false !== $element = current($response->getElements())) {
+                    $this->fromStringArray($element);
+                }
+            }
+
             //Mark the object as clean since no exception was thrown
             $this->setClean();
 
@@ -180,3 +201,4 @@ class Allocations extends Object
         return $data;
     }
 }
+
