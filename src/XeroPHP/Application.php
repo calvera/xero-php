@@ -2,6 +2,8 @@
 
 namespace XeroPHP;
 
+use XeroPHP\Remote\Exception\NotAvailableException;
+use XeroPHP\Remote\Exception\RateLimitExceededException;
 use XeroPHP\Remote\OAuth\Client;
 use XeroPHP\Remote\Object;
 use XeroPHP\Remote\Query;
@@ -125,21 +127,31 @@ abstract class Application {
      */
     public function loadByGUID($model, $guid) {
 
-        $class = $this->validateModelClass($model);
+        try {
+            $class = $this->validateModelClass($model);
 
-        $uri = sprintf('%s/%s', $class::getResourceURI(), $guid);
+            $uri = sprintf('%s/%s', $class::getResourceURI(), $guid);
 
-        $url = new URL($this, $uri);
-        $request = new Request($this, $url, Request::METHOD_GET);
-        $request->send();
+            $url = new URL($this, $uri);
+            $request = new Request($this, $url, Request::METHOD_GET);
+            $request->send();
 
-        //Return the first (if any) element from the response.
-        foreach($request->getResponse()->getElements() as $element){
-            $object = new $class($this);
-            $object->fromStringArray($element);
-            return $object;
+            //Return the first (if any) element from the response.
+            foreach ($request->getResponse()->getElements() as $element) {
+                $object = new $class($this);
+                $object->fromStringArray($element);
+
+                return $object;
+            }
+        } catch (RateLimitExceededException $e) {
+            sleep(10);
+
+            return $this->loadByGUID($model, $guid);
+        } catch (NotAvailableException $e) {
+            sleep(10);
+
+            return $this->loadByGUID($model, $guid);
         }
-
     }
 
 

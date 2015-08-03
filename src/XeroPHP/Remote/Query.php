@@ -4,6 +4,8 @@ namespace XeroPHP\Remote;
 
 use XeroPHP\Application;
 use XeroPHP\Models\Files\Object;
+use XeroPHP\Remote\Exception\NotAvailableException;
+use XeroPHP\Remote\Exception\RateLimitExceededException;
 
 class Query {
 
@@ -180,20 +182,28 @@ class Query {
      */
     public function execute() {
 
-        /** @var ObjectInterface $from_class */
-        $from_class = $this->from;
-        $request = $this->getRequest();
-        $request->send();
+        try {
+            /** @var ObjectInterface $from_class */
+            $from_class = $this->from;
+            $request = $this->getRequest();
+            $request->send();
 
-        $elements = array();
-        foreach($request->getResponse()->getElements() as $element) {
-            /** @var \XeroPHP\Models\Files\Object $built_element */
-            $built_element = new $from_class($this->app);
-            $built_element->fromStringArray($element);
-            $elements[] = $built_element;
+            $elements = array();
+            foreach ($request->getResponse()->getElements() as $element) {
+                /** @var \XeroPHP\Models\Files\Object $built_element */
+                $built_element = new $from_class($this->app);
+                $built_element->fromStringArray($element);
+                $elements[] = $built_element;
+            }
+
+            return $elements;
+        } catch (RateLimitExceededException $e) {
+            sleep(10);
+            return $this->execute();
+        } catch (NotAvailableException $e) {
+            sleep(10);
+            return $this->execute();
         }
-
-        return $elements;
     }
 
     /**
