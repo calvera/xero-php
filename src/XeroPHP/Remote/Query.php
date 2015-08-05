@@ -178,9 +178,11 @@ class Query {
     }
 
     /**
+     * @param int $sleptTimes
      * @return array
+     * @throws \XeroPHP\Exception
      */
-    public function execute() {
+    public function execute($sleptTimes = 0) {
 
         try {
             /** @var ObjectInterface $from_class */
@@ -198,10 +200,12 @@ class Query {
 
             return $elements;
         } catch (RateLimitExceededException $e) {
-            sleep(10);
+            sleep((mktime(null, null, 0)+62) - mktime());
+
             return $this->execute();
         } catch (NotAvailableException $e) {
-            sleep(10);
+            sleep((mktime(null, null, 0)+62) - mktime());
+
             return $this->execute();
         }
     }
