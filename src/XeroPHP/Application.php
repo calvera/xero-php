@@ -144,11 +144,11 @@ abstract class Application {
                 return $object;
             }
         } catch (RateLimitExceededException $e) {
-            sleep((mktime(null, null, 0)+62) - mktime());
+            Sleeper::sleepUntilNextMinute();
 
             return $this->loadByGUID($model, $guid);
         } catch (NotAvailableException $e) {
-            sleep((mktime(null, null, 0)+62) - mktime());
+            Sleeper::sleepUntilNextMinute();
 
             return $this->loadByGUID($model, $guid);
         }
