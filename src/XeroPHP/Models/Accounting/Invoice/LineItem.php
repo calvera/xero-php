@@ -154,7 +154,7 @@ class LineItem extends Remote\Object {
             'TaxType' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'TaxAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'LineAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
-            'Tracking' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
+            'Tracking' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Invoice\\Tracking', false, false),
             'DiscountRate' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
         );
     }
@@ -314,17 +314,17 @@ class LineItem extends Remote\Object {
     }
 
     /**
-     * @return string
+     * @return Tracking
      */
     public function getTracking() {
         return isset($this->_data['Tracking']) ? $this->_data['Tracking'] : null;
     }
 
     /**
-     * @param string $value
+     * @param Tracking $value
      * @return LineItem
      */
-    public function setTracking($value) {
+    public function setTracking(Tracking $value = null) {
         $this->propertyUpdated('Tracking', $value);
         $this->_data['Tracking'] = $value;
         return $this;
