@@ -113,11 +113,24 @@ class TrackingOptions extends Object
     }
 
     /**
+     * @param string $name
+     * @return $this
+     */
+    public function addActiveOption($name)
+    {
+        return $this->addOption(
+            (new TrackingOption())
+                ->setName($name)
+                ->setStatus('ACTIVE')
+        );
+    }
+
+    /**
      * @return null|TrackingOption[]
      */
     public function getOptions()
     {
-        return isset($this->_data['Options']) ? $this->_data['Options'] : null;
+        return isset($this->_data['Options']) ? $this->_data['Options'] : [];
     }
 
     /**
