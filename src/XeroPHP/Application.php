@@ -177,11 +177,11 @@ abstract class Application {
         //Saves any properties that don't want to be included in the normal loop (special saving endpoints)
         $this->savePropertiesDirectly($object);
 
-        if($object->isDirty()) {
+        if ($object->isDirty()) {
             $object->validate();
 
             //In this case it's new
-            if($object->hasGUID()) {
+            if ($object->hasGUID()) {
                 $method = Request::METHOD_POST;
                 $uri = sprintf('%s/%s', $object::getResourceURI(), $object->getGUID());
 
@@ -192,25 +192,31 @@ abstract class Application {
                 $object->setApplication($this);
             }
 
-            if(!$object::supportsMethod($method))
+            if (!$object::supportsMethod($method)) {
                 throw new Exception('%s doesn\'t support [%s] via the API', get_class($object), $method);
+            }
 
             //Put in an array with the first level containing only the 'root node'.
             $data = array($object::getRootNodeName() => $object->toStringArray());
             $url = new URL($this, $uri);
             $request = new Request($this, $url, $method);
-
-            $request->setBody(Helpers::arrayToXML($data))->send();
+            // Hack
+            $request
+                ->setBody(strtr(Helpers::arrayToXML($data), [
+                    '<TrackingCategory><TrackingCategory>' => '<TrackingCategory>',
+                    '</TrackingCategory></TrackingCategory>' => '</TrackingCategory>'
+                ]))
+                ->send()
+            ;
             $response = $request->getResponse();
 
-            if(false !== $element = current($response->getElements())) {
+            if (false !== $element = current($response->getElements())) {
                 $object->fromStringArray($element);
             }
             //Mark the object as clean since no exception was thrown
             $object->setClean();
 
             return $response;
-
         }
     }
 

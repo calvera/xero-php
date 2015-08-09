@@ -162,7 +162,7 @@ class TrackingCategory extends Remote\Object {
      * @return TrackingOption[]
      */
     public function getOptions() {
-        return isset($this->_data['Options']) ? $this->_data['Options'] : null;
+        return isset($this->_data['Options']) ? $this->_data['Options'] : [];
     }
 
     /**

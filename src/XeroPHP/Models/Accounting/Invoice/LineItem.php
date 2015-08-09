@@ -346,6 +346,4 @@ class LineItem extends Remote\Object {
         $this->_data['DiscountRate'] = $value;
         return $this;
     }
-
-
 }

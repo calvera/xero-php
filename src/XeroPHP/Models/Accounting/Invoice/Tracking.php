@@ -4,7 +4,7 @@ namespace XeroPHP\Models\Accounting\Invoice;
 
 use XeroPHP\Remote;
 
-class Tracking
+class Tracking extends Remote\Object
 {
     /**
      * @var TrackingCategory[]
@@ -27,7 +27,7 @@ class Tracking
      * @return string
      */
     public static function getRootNodeName(){
-        return 'TrackingCategory';
+        return 'Tracking';
     }
 
 
@@ -73,14 +73,31 @@ class Tracking
     }
 
     public function toStringArray() {
-        return [
-            'Tracking' => [array_map(function(TrackingCategory $trackingCategory) {
-                return $trackingCategory->toStringArray();
-            }, $this->trackingCategories)]
-        ];
+        return ['TrackingCategory' => array_map(function(TrackingCategory $trackingCategory) {
+            return $trackingCategory->toStringArray();
+        }, $this->trackingCategories)];
     }
 
-    public function fromStringArray() {
+    /**
+     * Load an assoc array into the instance of the object $property => $value
+     * $replace_data - replace existing data
+     *
+     * @param $input_array
+     * @param $replace_data
+     * @return Object
+     */
+    public function fromStringArray($input_array, $replace_data = false)
+    {
         return [];
+    }
+
+    /**
+     * @return array
+     */
+    static function getProperties()
+    {
+        return array(
+            'TrackingCategory' => array (false, self::PROPERTY_TYPE_OBJECT, 'Accounting\\Invoice\\TrackingCategory', true, false),
+        );
     }
 }

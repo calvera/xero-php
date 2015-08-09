@@ -109,10 +109,8 @@ class TrackingCategory extends Remote\Object {
 
     public function toStringArray() {
         return [
-            'TrackingCategory' => [
-                'Name' => $this->getName(),
-                'Option' => $this->getOption(),
-            ]
+            'Name' => $this->getName(),
+            'Option' => $this->getOption(),
         ];
     }
 }
