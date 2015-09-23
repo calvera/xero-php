@@ -242,7 +242,7 @@ class Query {
         }
 
         if($this->includeArchived) {
-            $request->setParameter('includeArchived', $this->includeArchived);
+            $request->setParameter('includeArchived', true);
         }
 
         return $request;
