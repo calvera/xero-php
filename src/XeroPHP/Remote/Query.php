@@ -3,7 +3,6 @@
 namespace XeroPHP\Remote;
 
 use XeroPHP\Application;
-use XeroPHP\Models\Files\Object;
 use XeroPHP\Remote\Exception\NotAvailableException;
 use XeroPHP\Remote\Exception\RateLimitExceededException;
 use XeroPHP\Sleeper;
