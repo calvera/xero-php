@@ -83,7 +83,7 @@ class BankAccount extends Remote\Object {
     public static function getProperties() {
         return array(
             'Code' => array (true, self::PROPERTY_TYPE_STRING, null, false, false),
-            'AccountID' => array (true, self::PROPERTY_TYPE_STRING, null, false, false)
+            'AccountID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false)
         );
     }
 

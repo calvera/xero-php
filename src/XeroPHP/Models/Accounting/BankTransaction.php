@@ -219,7 +219,8 @@ class BankTransaction extends Remote\Object {
             'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'BankTransactionID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTime', false, false),
-            'HasAttachments' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false)
+            'HasAttachments' => array (false, self::PROPERTY_TYPE_BOOLEAN, null, false, false),
+            'PrepaymentID' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
         );
     }
 
@@ -511,6 +512,8 @@ class BankTransaction extends Remote\Object {
         return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
-
+    public function getPrepaymentID() {
+        return isset($this->_data['PrepaymentID']) ? $this->_data['PrepaymentID'] : null;
+    }
 
 }
