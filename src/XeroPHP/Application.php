@@ -121,7 +121,7 @@ abstract class Application {
      *
      * @param $model
      * @param $guid
-     * @return mixed
+     * @return Object
      * @throws Exception
      * @throws Remote\Exception\NotFoundException
      */
@@ -138,6 +138,7 @@ abstract class Application {
 
             //Return the first (if any) element from the response.
             foreach ($request->getResponse()->getElements() as $element) {
+                /** @var Object $object */
                 $object = new $class($this);
                 $object->fromStringArray($element);
 
