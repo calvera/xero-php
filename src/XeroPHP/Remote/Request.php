@@ -5,6 +5,7 @@ namespace XeroPHP\Remote;
 use XeroPHP\Application;
 use XeroPHP\Exception;
 use XeroPHP\Helpers;
+use XeroPHP\Remote\Exception\CurlException;
 
 
 class Request {
@@ -24,6 +25,7 @@ class Request {
     const HEADER_CONTENT_LENGTH    = 'Content-Length';
     const HEADER_AUTHORIZATION     = 'Authorization';
     const HEADER_IF_MODIFIED_SINCE = 'If-Modified-Since';
+    const MAX_CURL_ATTEMPTS = 5;
 
     private $app;
     private $url;
@@ -92,14 +94,22 @@ class Request {
 
         curl_setopt($ch, CURLOPT_URL, $full_uri);
 
-        if($this->method === self::METHOD_POST || $this->method === self::METHOD_PUT)
+        if ($this->method === self::METHOD_POST || $this->method === self::METHOD_PUT) {
             curl_setopt($ch, CURLOPT_POST, true);
+        }
 
-        $response = curl_exec($ch);
-        $info = curl_getinfo($ch);
-
-        if($response === false) {
-            throw new Exception('Curl error: ' . curl_error($ch));
+        $response = false;
+        $attempts = 0;
+        while ($response === false) {
+            if ($attempts > 0) {
+                sleep(1);
+            }
+            if ($attempts > self::MAX_CURL_ATTEMPTS) {
+                throw new CurlException(curl_error($ch), curl_errno($ch));
+            }
+            $response = curl_exec($ch);
+            $info = curl_getinfo($ch);
+            $attempts++;
         }
 
         $this->response = new Response($this, $response, $info);
