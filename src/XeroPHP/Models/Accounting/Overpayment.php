@@ -205,6 +205,7 @@ class Overpayment extends Remote\Object {
             'SubTotal' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'TotalTax' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'Total' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
+            'AppliedAmount' => array (false, self::PROPERTY_TYPE_FLOAT, null, false, false),
             'UpdatedDateUTC' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTime', false, false),
             'CurrencyCode' => array (false, self::PROPERTY_TYPE_STRING, null, false, false),
             'FullyPaidOnDate' => array (false, self::PROPERTY_TYPE_DATE, '\\DateTime', false, false),
@@ -525,5 +526,20 @@ class Overpayment extends Remote\Object {
         return $this;
     }
 
+    /**
+     * @return float
+     */
+    public function getAppliedAmount() {
+        return isset($this->_data['AppliedAmount']) ? $this->_data['AppliedAmount'] : null;
+    }
 
+    /**
+     * @param float $value
+     * @return Overpayment
+     */
+    public function setAppliedAmount($value) {
+        $this->propertyUpdated('AppliedAmount', $value);
+        $this->_data['AppliedAmount'] = $value;
+        return $this;
+    }
 }
