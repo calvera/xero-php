@@ -6,6 +6,7 @@ use XeroPHP\Application;
 use XeroPHP\Exception;
 use XeroPHP\Helpers;
 use XeroPHP\Remote\Exception\CurlException;
+use XeroPHP\Sleeper;
 
 
 class Request {
@@ -102,7 +103,7 @@ class Request {
         $attempts = 0;
         while ($response === false) {
             if ($attempts > 0) {
-                sleep(1);
+                Sleeper::sleepUntilNextMinute();
             }
             if ($attempts > self::MAX_CURL_ATTEMPTS) {
                 throw new CurlException(curl_error($ch), curl_errno($ch));
