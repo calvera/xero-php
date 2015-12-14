@@ -178,11 +178,10 @@ class Query {
     }
 
     /**
-     * @param int $sleptTimes
      * @return array
      * @throws \XeroPHP\Exception
      */
-    public function execute($sleptTimes = 0) {
+    public function execute() {
 
         try {
             /** @var ObjectInterface $from_class */
@@ -208,6 +207,19 @@ class Query {
 
             return $this->execute();
         }
+    }
+
+    /**
+     * @return object|null
+     */
+    public function getOneOrNullResult()
+    {
+        $objects = $this->execute();
+        foreach ($objects as $object) {
+            return $object;
+        }
+
+        return null;
     }
 
     /**
