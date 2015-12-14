@@ -450,6 +450,16 @@ e.g.
         return isset($this->_data['HasAttachments']) ? $this->_data['HasAttachments'] : null;
     }
 
+    public function toSaveStringArray()
+    {
+        $data = $this->toStringArray();
+        $saveData = [];
+        foreach (array_keys($this->_dirty) as $key) {
+            if (isset($this->_dirty[$key])) {
+                $saveData[$key] = $data[$key];
+            }
+        }
 
-
+        return $saveData;
+    }
 }

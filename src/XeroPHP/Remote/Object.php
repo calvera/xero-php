@@ -213,6 +213,13 @@ abstract class Object implements ObjectInterface, \JsonSerializable {
         return $out;
     }
 
+    /**
+     * @return mixed
+     */
+    public function toSaveStringArray()
+    {
+        return $this->toStringArray();
+    }
 
     /**
      * Convert properties to strings, based ont he types parsed
