@@ -652,7 +652,7 @@ class Invoice extends Remote\Object {
      * @return Payment[]
      */
     public function getPayments() {
-        return isset($this->_data['Payments']) ? $this->_data['Payments'] : null;
+        return isset($this->_data['Payments']) ? $this->_data['Payments'] : [];
     }
 
 
