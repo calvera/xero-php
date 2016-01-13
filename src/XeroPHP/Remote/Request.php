@@ -6,6 +6,9 @@ use XeroPHP\Application;
 use XeroPHP\Exception;
 use XeroPHP\Helpers;
 use XeroPHP\Remote\Exception\CurlException;
+use XeroPHP\Remote\Exception\NotAvailableException;
+use XeroPHP\Remote\Exception\RateLimitExceededException;
+use XeroPHP\Remote\Exception\UnauthorizedException;
 use XeroPHP\Sleeper;
 
 
@@ -64,8 +67,29 @@ class Request {
 
     }
 
-    public function send() {
+    public function send()
+    {
+        try {
+            $this->doSend();
+        } catch (RateLimitExceededException $e) {
+            Sleeper::sleepUntilNextMinute();
 
+            return $this->send();
+        } catch (NotAvailableException $e) {
+            Sleeper::sleepUntilNextMinute();
+
+            return $this->send();
+        } catch (UnauthorizedException $e) {
+            if (preg_match('/The nonce value "[^"]+" has already been used/', $e->getMessage())) {
+                return $this->send();
+            } else {
+                throw $e;
+            }
+        }
+    }
+
+    private function doSend()
+    {
         //Sign the request - this just sets the Authorization header
         $this->app->getOAuthClient()->sign($this);
 

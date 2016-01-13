@@ -183,30 +183,20 @@ class Query {
      */
     public function execute() {
 
-        try {
-            /** @var ObjectInterface $from_class */
-            $from_class = $this->from;
-            $request = $this->getRequest();
-            $request->send();
+        /** @var ObjectInterface $from_class */
+        $from_class = $this->from;
+        $request = $this->getRequest();
+        $request->send();
 
-            $elements = array();
-            foreach ($request->getResponse()->getElements() as $element) {
-                /** @var \XeroPHP\Models\Files\Object $built_element */
-                $built_element = new $from_class($this->app);
-                $built_element->fromStringArray($element);
-                $elements[] = $built_element;
-            }
-
-            return $elements;
-        } catch (RateLimitExceededException $e) {
-            Sleeper::sleepUntilNextMinute();
-
-            return $this->execute();
-        } catch (NotAvailableException $e) {
-            Sleeper::sleepUntilNextMinute();
-
-            return $this->execute();
+        $elements = array();
+        foreach ($request->getResponse()->getElements() as $element) {
+            /** @var \XeroPHP\Models\Files\Object $built_element */
+            $built_element = new $from_class($this->app);
+            $built_element->fromStringArray($element);
+            $elements[] = $built_element;
         }
+
+        return $elements;
     }
 
     /**
