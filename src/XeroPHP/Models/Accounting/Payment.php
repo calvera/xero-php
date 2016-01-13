@@ -406,5 +406,11 @@ class Payment extends Remote\Object {
         return $this;
     }
 
-
+    /**
+     * @return CreditNote|Invoice|Overpayment|Prepayment
+     */
+    public function getAppliedTo()
+    {
+        return $this->getInvoice() ?? $this->getCreditNote() ?? $this->getPrepayment() ?? $this->getOverpayment();
+    }
 }
